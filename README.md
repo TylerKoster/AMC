@@ -9,6 +9,7 @@ This repository contains the current specification, deterministic dispatcher and
 - `outputs/` — specifications, experiment plans, evidence tables, and run reports.
 - `pilot/` — capsule fixtures, compact projections, dispatcher logic, SQLite adapters, and deterministic tests.
 - `pilot/live_eval/` — optional OpenAI API-backed comparison runners and saved experiment results.
+- `pilot/live_eval/evals/round_c_real_inputs_v1.json` — frozen source-backed Round C inputs; preservation oracles are stored separately.
 
 ## Run deterministic tests
 
@@ -31,3 +32,7 @@ See [`pilot/README.md`](pilot/README.md) and [`pilot/live_eval/README.md`](pilot
 ## Evidence standard
 
 Deterministic tests establish only that the current code satisfies its encoded contract and kills the included mutations. API-backed results are experimental observations under their recorded conditions; they are not general proof of superiority, safety, compression, or production durability.
+
+Experiment 012 freezes ten fresh official-source retrieval trajectories and held-out preservation contracts before paid Round C. It makes no model-performance claim and used no OpenAI calls.
+
+Experiment 013 adds an oracle-blind live executor, atomic ungraded-response persistence, seeded condition order, and a separate post-persistence grader. Its committed audit is a zero-model readiness check, not a paid Round C result.

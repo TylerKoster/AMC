@@ -82,3 +82,33 @@ python .\pilot\round_c_preflight.py
 ```
 
 That preflight removes precomputed answer fields from the next-round packet contract and freezes event-specific affected-ID semantics. A paid Round C runner should not be treated as ready until it uses the preflight's input/oracle partition and counts resolver retrieval costs.
+
+## Round C separated live runner
+
+Experiment 013 wires the ten source-backed inputs into a three-process boundary:
+
+1. `round_c_packet_audit.py` constructs packets and the randomized schedule without importing the Agents SDK or loading contracts.
+2. `round_c_live.py` executes the paid calls and atomically persists ungraded structured responses. It contains no grader import or contract path.
+3. `round_c_grade.py` rejects partial response artifacts before loading the held-out contract file.
+
+Run the required no-model gate:
+
+```powershell
+python .\pilot\live_eval\round_c_packet_audit.py
+```
+
+The preregistered schedule uses ten tasks, three conditions, two repetitions, seed `13013`, and 60 calls. Paid execution is intentionally double-gated and is **not authorized by running the audit**:
+
+```powershell
+python .\pilot\live_eval\round_c_live.py `
+  --execute-paid-round-c `
+  --acknowledge-calls 60
+```
+
+Only after that command completes with `responses-persisted-ungraded` may grading run:
+
+```powershell
+python .\pilot\live_eval\round_c_grade.py
+```
+
+Do not change the protocol, seed, input partition, model, instructions, output schema, or grader after viewing model responses. Any such change requires a new protocol version and a new run.
