@@ -34,3 +34,5 @@ See [`pilot/README.md`](pilot/README.md) and [`pilot/live_eval/README.md`](pilot
 Deterministic tests establish only that the current code satisfies its encoded contract and kills the included mutations. API-backed results are experimental observations under their recorded conditions; they are not general proof of superiority, safety, compression, or production durability.
 
 Experiment 012 freezes ten fresh official-source retrieval trajectories and held-out preservation contracts before paid Round C. It makes no model-performance claim and used no OpenAI calls.
+
+Experiment 013 adds an oracle-blind live executor, atomic ungraded-response persistence, seeded condition order, and a separate post-persistence grader. Its committed audit is a zero-model readiness check, not a paid Round C result.
