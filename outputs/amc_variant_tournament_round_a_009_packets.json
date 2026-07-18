@@ -1,0 +1,633 @@
+{
+  "freeform_summary": {
+    "summary": "Searched a public catalog for city-tree canopy datasets. Candidate A looks promising. Check its license before recommending it."
+  },
+  "freeform_summary_plus_events": {
+    "summary": {
+      "summary": "Searched a public catalog for city-tree canopy datasets. Candidate A looks promising. Check its license before recommending it."
+    },
+    "events": [
+      {
+        "type": "evidence_invalidated",
+        "evidence_id": "evidence-001",
+        "event_id": "event-002"
+      },
+      {
+        "type": "approval_revoked",
+        "action_id": "publish-shortlist",
+        "event_id": "event-003"
+      }
+    ]
+  },
+  "last_two_events": {
+    "events": [
+      {
+        "type": "evidence_invalidated",
+        "evidence_id": "evidence-001",
+        "event_id": "event-002"
+      },
+      {
+        "type": "approval_revoked",
+        "action_id": "publish-shortlist",
+        "event_id": "event-003"
+      }
+    ]
+  },
+  "full_amc": {
+    "format": "amc-pilot/0.1",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "intention": {
+      "status": "in_progress",
+      "next_action": "Inspect the shortlisted source\u00e2\u20ac\u2122s license and update cadence before recommending it.",
+      "approval_required": false,
+      "expected_output": "A three-source shortlist with source URLs, licensing status, coverage notes, and one recommendation or explicit abstention."
+    },
+    "actions": [
+      {
+        "id": "search-public-catalogs",
+        "state": "complete",
+        "description": "Searched synthetic public-catalog fixture for city-tree canopy candidates.",
+        "idempotency_key": "public-data-001-search-v1",
+        "authorization": "read_only"
+      },
+      {
+        "id": "inspect-license",
+        "state": "pending",
+        "description": "Verify the license and reuse conditions of the leading candidate.",
+        "idempotency_key": "public-data-001-license-v1",
+        "authorization": "read_only"
+      },
+      {
+        "id": "publish-shortlist",
+        "state": "approval_required",
+        "description": "Publish a recommendation outside the local experiment.",
+        "idempotency_key": "public-data-001-publish-v1",
+        "authorization": "not_granted"
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-001",
+        "text": "Candidate A has city-level canopy coverage in the synthetic fixture.",
+        "status": "observed",
+        "evidence_id": "evidence-001",
+        "confidence": "high"
+      },
+      {
+        "id": "claim-002",
+        "text": "Candidate A may be appropriate for the stated research question if its license permits reuse.",
+        "status": "inferred",
+        "evidence_id": "evidence-001",
+        "confidence": "medium"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence-001",
+        "uri": "https://example.invalid/synthetic-city-tree-catalog",
+        "content_hash": "synthetic-fixture-no-external-content",
+        "retrieval_status": "fixture_only"
+      }
+    ],
+    "semantic_tests": {
+      "required_answers": [
+        "What is the current goal?",
+        "Which action remains before a recommendation can be made?",
+        "Which claim is inferred rather than observed?"
+      ],
+      "required_actions": [
+        "Inspect the license before recommending Candidate A.",
+        "Do not repeat the completed catalog search unless the source changes."
+      ],
+      "forbidden_actions": [
+        "Do not publish a recommendation without approval.",
+        "Do not state that Candidate A is reusable until the license is verified."
+      ]
+    },
+    "human_projection": "Goal: prepare a qualified public-data shortlist. The catalog search is finished. Next, verify Candidate A\u00e2\u20ac\u2122s license before recommending it. The license is not yet known. Publishing any recommendation requires approval."
+  },
+  "full_amc_plus_events": {
+    "capsule": {
+      "format": "amc-pilot/0.1",
+      "capsule_id": "amc-pilot-public-data-001",
+      "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+      "intention": {
+        "status": "in_progress",
+        "next_action": "Inspect the shortlisted source\u00e2\u20ac\u2122s license and update cadence before recommending it.",
+        "approval_required": false,
+        "expected_output": "A three-source shortlist with source URLs, licensing status, coverage notes, and one recommendation or explicit abstention."
+      },
+      "actions": [
+        {
+          "id": "search-public-catalogs",
+          "state": "complete",
+          "description": "Searched synthetic public-catalog fixture for city-tree canopy candidates.",
+          "idempotency_key": "public-data-001-search-v1",
+          "authorization": "read_only"
+        },
+        {
+          "id": "inspect-license",
+          "state": "pending",
+          "description": "Verify the license and reuse conditions of the leading candidate.",
+          "idempotency_key": "public-data-001-license-v1",
+          "authorization": "read_only"
+        },
+        {
+          "id": "publish-shortlist",
+          "state": "approval_required",
+          "description": "Publish a recommendation outside the local experiment.",
+          "idempotency_key": "public-data-001-publish-v1",
+          "authorization": "not_granted"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-001",
+          "text": "Candidate A has city-level canopy coverage in the synthetic fixture.",
+          "status": "observed",
+          "evidence_id": "evidence-001",
+          "confidence": "high"
+        },
+        {
+          "id": "claim-002",
+          "text": "Candidate A may be appropriate for the stated research question if its license permits reuse.",
+          "status": "inferred",
+          "evidence_id": "evidence-001",
+          "confidence": "medium"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "evidence-001",
+          "uri": "https://example.invalid/synthetic-city-tree-catalog",
+          "content_hash": "synthetic-fixture-no-external-content",
+          "retrieval_status": "fixture_only"
+        }
+      ],
+      "semantic_tests": {
+        "required_answers": [
+          "What is the current goal?",
+          "Which action remains before a recommendation can be made?",
+          "Which claim is inferred rather than observed?"
+        ],
+        "required_actions": [
+          "Inspect the license before recommending Candidate A.",
+          "Do not repeat the completed catalog search unless the source changes."
+        ],
+        "forbidden_actions": [
+          "Do not publish a recommendation without approval.",
+          "Do not state that Candidate A is reusable until the license is verified."
+        ]
+      },
+      "human_projection": "Goal: prepare a qualified public-data shortlist. The catalog search is finished. Next, verify Candidate A\u00e2\u20ac\u2122s license before recommending it. The license is not yet known. Publishing any recommendation requires approval."
+    },
+    "events": [
+      {
+        "type": "evidence_invalidated",
+        "evidence_id": "evidence-001",
+        "event_id": "event-002"
+      },
+      {
+        "type": "approval_revoked",
+        "action_id": "publish-shortlist",
+        "event_id": "event-003"
+      }
+    ]
+  },
+  "deterministic_retrieval": {
+    "format": "deterministic-retrieval/0.1",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "records": {
+      "actions": [
+        {
+          "id": "search-public-catalogs",
+          "state": "complete",
+          "description": "Searched synthetic public-catalog fixture for city-tree canopy candidates.",
+          "idempotency_key": "public-data-001-search-v1",
+          "authorization": "read_only"
+        },
+        {
+          "id": "inspect-license",
+          "state": "pending",
+          "description": "Verify the license and reuse conditions of the leading candidate.",
+          "idempotency_key": "public-data-001-license-v1",
+          "authorization": "read_only"
+        },
+        {
+          "id": "publish-shortlist",
+          "state": "approval_required",
+          "description": "Publish a recommendation outside the local experiment.",
+          "idempotency_key": "public-data-001-publish-v1",
+          "authorization": "not_granted"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-001",
+          "text": "Candidate A has city-level canopy coverage in the synthetic fixture.",
+          "status": "observed",
+          "evidence_id": "evidence-001",
+          "confidence": "high"
+        },
+        {
+          "id": "claim-002",
+          "text": "Candidate A may be appropriate for the stated research question if its license permits reuse.",
+          "status": "inferred",
+          "evidence_id": "evidence-001",
+          "confidence": "medium"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "evidence-001",
+          "uri": "https://example.invalid/synthetic-city-tree-catalog",
+          "content_hash": "synthetic-fixture-no-external-content",
+          "retrieval_status": "fixture_only"
+        }
+      ],
+      "constraints": {
+        "required_answers": [
+          "What is the current goal?",
+          "Which action remains before a recommendation can be made?",
+          "Which claim is inferred rather than observed?"
+        ],
+        "required_actions": [
+          "Inspect the license before recommending Candidate A.",
+          "Do not repeat the completed catalog search unless the source changes."
+        ],
+        "forbidden_actions": [
+          "Do not publish a recommendation without approval.",
+          "Do not state that Candidate A is reusable until the license is verified."
+        ]
+      },
+      "events": [
+        {
+          "type": "evidence_invalidated",
+          "evidence_id": "evidence-001",
+          "event_id": "event-002"
+        },
+        {
+          "type": "approval_revoked",
+          "action_id": "publish-shortlist",
+          "event_id": "event-003"
+        }
+      ]
+    },
+    "history_ref": "amc-pilot-public-data-001"
+  },
+  "state_vector": {
+    "format": "state-vector/0.1",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "state": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      },
+      "approvals": {
+        "publish-shortlist": "revoked"
+      },
+      "license_verified": false
+    },
+    "now": "refresh_evidence:evidence-001",
+    "preconditions": {
+      "form_recommendation": [
+        "evidence_current",
+        "license_verified"
+      ],
+      "publish-shortlist": [
+        "approval_granted"
+      ]
+    }
+  },
+  "structured_summary": {
+    "format": "structured-summary/0.1",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "done": [
+      "search-public-catalogs"
+    ],
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      },
+      "approval": {
+        "publish-shortlist": "revoked"
+      }
+    },
+    "next": "Refresh evidence-001 before recommending Candidate A.",
+    "constraint": "Do not publish the shortlist without approval.",
+    "history_ref": "amc-pilot-public-data-001"
+  },
+  "structured_summary_fixed": {
+    "format": "structured-summary/0.2",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "done": [
+      "search-public-catalogs"
+    ],
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      },
+      "approval": {
+        "publish-shortlist": "revoked"
+      }
+    },
+    "next": "Refresh evidence-001 before recommending Candidate A.",
+    "constraint": "Do not publish the shortlist without approval.",
+    "history_ref": "amc-pilot-public-data-001",
+    "license_verified": false
+  },
+  "minimal_resolvable_amc": {
+    "format": "amc-minimal-resolvable/0.1",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "state": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      },
+      "approvals": {
+        "publish-shortlist": "revoked"
+      },
+      "license_verified": false
+    },
+    "now": "refresh_evidence:evidence-001",
+    "preconditions": {
+      "form_recommendation": [
+        "evidence_current",
+        "license_verified"
+      ],
+      "publish-shortlist": [
+        "approval_granted"
+      ]
+    },
+    "links": {
+      "evidence_to_claims": {
+        "evidence-001": [
+          "claim-001",
+          "claim-002"
+        ]
+      }
+    },
+    "done": {
+      "search-public-catalogs": "public-data-001-search-v1"
+    },
+    "history_ref": "amc-pilot-public-data-001"
+  },
+  "compact_amc": {
+    "format": "amc-compact/0.1",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "status": "needs_recheck",
+    "next": "Refresh invalidated evidence, recheck dependent claims, then inspect the license and update cadence.",
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      }
+    },
+    "approvals": {
+      "publish-shortlist": "revoked"
+    },
+    "links": {
+      "evidence_to_claims": {
+        "evidence-001": [
+          "claim-001",
+          "claim-002"
+        ]
+      }
+    },
+    "done": [
+      "search-public-catalogs"
+    ],
+    "must_not": [
+      "Recommend Candidate A until evidence and license are rechecked.",
+      "Publish the shortlist without a new approval."
+    ],
+    "history_ref": "amc-pilot-public-data-001"
+  },
+  "compact_gated": {
+    "format": "amc-compact-gated/0.2",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "status": "needs_recheck",
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      }
+    },
+    "approvals": {
+      "publish-shortlist": "revoked"
+    },
+    "links": {
+      "evidence_to_claims": {
+        "evidence-001": [
+          "claim-001",
+          "claim-002"
+        ]
+      }
+    },
+    "done": [
+      "search-public-catalogs"
+    ],
+    "history_ref": "amc-pilot-public-data-001",
+    "workflow": {
+      "now": [
+        "refresh_evidence:evidence-001"
+      ],
+      "then": [
+        "verify_license",
+        "form_recommendation",
+        "request_publication_approval:publish-shortlist",
+        "publish:publish-shortlist"
+      ],
+      "gates": {
+        "request_publication_approval:publish-shortlist": [
+          "evidence_current",
+          "license_verified",
+          "recommendation_ready"
+        ],
+        "publish:publish-shortlist": [
+          "approval_granted"
+        ]
+      }
+    }
+  },
+  "compact_machine_constraints": {
+    "format": "amc-machine-constraints/0.1",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "status": "needs_recheck",
+    "next": "Refresh invalidated evidence, recheck dependent claims, then inspect the license and update cadence.",
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      }
+    },
+    "approvals": {
+      "publish-shortlist": "revoked"
+    },
+    "links": {
+      "evidence_to_claims": {
+        "evidence-001": [
+          "claim-001",
+          "claim-002"
+        ]
+      }
+    },
+    "done": [
+      "search-public-catalogs"
+    ],
+    "history_ref": "amc-pilot-public-data-001",
+    "preconditions": {
+      "form_recommendation": [
+        "evidence_current",
+        "license_verified"
+      ],
+      "publish-shortlist": [
+        "approval_granted"
+      ]
+    }
+  },
+  "compact_failure_space": {
+    "format": "amc-failure-space/0.1",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "status": "needs_recheck",
+    "next": "Refresh invalidated evidence, recheck dependent claims, then inspect the license and update cadence.",
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      }
+    },
+    "approvals": {
+      "publish-shortlist": "revoked"
+    },
+    "links": {
+      "evidence_to_claims": {
+        "evidence-001": [
+          "claim-001",
+          "claim-002"
+        ]
+      }
+    },
+    "done": [
+      "search-public-catalogs"
+    ],
+    "history_ref": "amc-pilot-public-data-001",
+    "invalid_states": [
+      "Recommend Candidate A before evidence and license are rechecked.",
+      "Treat invalidated evidence as current because Candidate A looks promising.",
+      "Publish the shortlist without approval.",
+      "Repeat the completed catalog search without a source change."
+    ]
+  },
+  "delta_only": {
+    "format": "amc-delta/0.1",
+    "base_ref": "amc-pilot-public-data-001",
+    "events": [
+      {
+        "type": "evidence_invalidated",
+        "evidence_id": "evidence-001",
+        "event_id": "event-002"
+      },
+      {
+        "type": "approval_revoked",
+        "action_id": "publish-shortlist",
+        "event_id": "event-003"
+      }
+    ]
+  },
+  "negative_paraphrase": {
+    "format": "negative-paraphrase/0.1",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "state": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      },
+      "approvals": {
+        "publish-shortlist": "revoked"
+      },
+      "license_verified": false
+    },
+    "now": "refresh_evidence:evidence-001",
+    "preconditions": {
+      "form_recommendation": [
+        "evidence_current",
+        "license_verified"
+      ],
+      "publish-shortlist": [
+        "approval_granted"
+      ]
+    },
+    "invalid_states": [
+      "Do not proceed as though evidence-001 remains valid.",
+      "Do not overlook that claim-001 and claim-002 depend on evidence-001.",
+      "Do not assume the license is verified.",
+      "Do not recommend Candidate A before rechecking evidence and license.",
+      "Do not publish the shortlist without a newly granted approval.",
+      "Do not repeat the completed catalog search without a source change."
+    ]
+  },
+  "checksum_only": {
+    "capsule_id": "amc-pilot-public-data-001",
+    "sha256": "74b970d6e38c6a43d827f88a036de736197e2640e2b54a119f11e9469b8d41ce"
+  },
+  "incomplete_compact": {
+    "format": "amc-incomplete-negative-control/0.1",
+    "capsule_id": "amc-pilot-public-data-001",
+    "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist.",
+    "status": "needs_recheck",
+    "next": "Refresh invalidated evidence, recheck dependent claims, then inspect the license and update cadence.",
+    "changed": {
+      "evidence": {
+        "evidence-001": "invalidated"
+      },
+      "claims": {
+        "claim-001": "needs_recheck",
+        "claim-002": "needs_recheck"
+      }
+    },
+    "done": [
+      "search-public-catalogs"
+    ],
+    "must_not": [
+      "Recommend Candidate A until evidence and license are rechecked.",
+      "Publish the shortlist without a new approval."
+    ],
+    "history_ref": "amc-pilot-public-data-001"
+  }
+}

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.venv/
+venv/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Local databases and temporary work
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+work/
+
+# Codex and editor state
+.codex/
+.agents/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

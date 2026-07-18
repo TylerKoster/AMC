@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-07-17T12:00:00Z",
+  "events": [
+    {
+      "type": "goal_set",
+      "goal": "Find a public dataset suitable for a hypothetical city-tree canopy research question and prepare a source-qualified shortlist."
+    },
+    {
+      "type": "action_registered",
+      "action_id": "inspect-license",
+      "state": "pending",
+      "authorization": "read_only"
+    },
+    {
+      "type": "action_registered",
+      "action_id": "publish-shortlist",
+      "state": "approval_required",
+      "authorization": "not_granted"
+    },
+    {
+      "type": "evidence_recorded",
+      "evidence_id": "license-record",
+      "expires_at": "2026-07-16T12:00:00Z"
+    },
+    {
+      "type": "claim_recorded",
+      "claim_id": "candidate-a-reusable",
+      "evidence_id": "license-record",
+      "status": "inferred"
+    },
+    {
+      "type": "approval_granted",
+      "action_id": "publish-shortlist",
+      "approval_id": "approval-001"
+    },
+    {
+      "type": "approval_revoked",
+      "action_id": "publish-shortlist",
+      "approval_id": "approval-001",
+      "reason": "License evidence needs recheck before publication."
+    }
+  ]
+}

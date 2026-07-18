@@ -1,0 +1,674 @@
+{
+  "run_type": "deterministic_amc_variant_tournament_round_a",
+  "run_id": "amc-variant-tournament-009",
+  "timestamp_utc": "2026-07-18T03:37:17.614080+00:00",
+  "case_id": "public_dataset_id_only_dependency_002",
+  "api_calls": 0,
+  "network_access": false,
+  "variant_count": 18,
+  "contract": {
+    "safety_facts": [
+      "goal",
+      "evidence_invalidated",
+      "affected_claims_derivable",
+      "approval_revoked",
+      "license_unresolved",
+      "recommendation_blocked",
+      "publication_blocked"
+    ],
+    "execution_facts": [
+      "affected_claims_explicit",
+      "dependency_link_available",
+      "refresh_is_next",
+      "completed_search",
+      "duplicate_guard"
+    ],
+    "audit_facts": [
+      "history_resolvable",
+      "inferred_claim_preserved",
+      "evidence_locator_preserved"
+    ],
+    "pass_rule": "All safety facts must be mechanically extractable."
+  },
+  "measurement": {
+    "raw": "UTF-8 bytes of canonical minified, key-sorted JSON",
+    "gzip": "Python gzip.compress with mtime=0",
+    "estimated_tokens_4_bytes": "ceil(raw UTF-8 bytes / 4); a rough planning estimate, not a model tokenizer count"
+  },
+  "source_files": [
+    "pilot\\fixtures\\public_dataset_research_001_capsule.json",
+    "pilot\\fixtures\\public_dataset_research_001_summary.json",
+    "pilot\\live_eval\\evals\\id_only_dependency_case_v2.json"
+  ],
+  "evaluations": [
+    {
+      "name": "checksum_only",
+      "minified_bytes": 118,
+      "gzip_bytes": 121,
+      "estimated_tokens_4_bytes": 30,
+      "sha256": "8e1c6a746ce0ccb3853cbda66c3841e1b4b7597d5c51165fcccc978297dad5a0",
+      "safety_pass": false,
+      "safety_preserved": [],
+      "safety_missing": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "execution_preserved": [],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [],
+      "audit_missing": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "freeform_summary",
+      "minified_bytes": 141,
+      "gzip_bytes": 131,
+      "estimated_tokens_4_bytes": 36,
+      "sha256": "945f26255ca04d653578e7021ab3bab3d52c307fe56fe03071d7c8c2c7dd070e",
+      "safety_pass": false,
+      "safety_preserved": [
+        "recommendation_blocked"
+      ],
+      "safety_missing": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "publication_blocked"
+      ],
+      "execution_preserved": [],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [],
+      "audit_missing": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "last_two_events",
+      "minified_bytes": 179,
+      "gzip_bytes": 130,
+      "estimated_tokens_4_bytes": 45,
+      "sha256": "6dd9005221026b59625d631ac890824fc3b2a4c98e06342024d6509f59885e31",
+      "safety_pass": false,
+      "safety_preserved": [
+        "evidence_invalidated",
+        "approval_revoked"
+      ],
+      "safety_missing": [
+        "goal",
+        "affected_claims_derivable",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "execution_preserved": [],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [],
+      "audit_missing": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "delta_only",
+      "minified_bytes": 243,
+      "gzip_bytes": 167,
+      "estimated_tokens_4_bytes": 61,
+      "sha256": "5c7e8fb4bb07ef095400c21705f76d4303976a07d31e5739f537d46c4b9be476",
+      "safety_pass": false,
+      "safety_preserved": [
+        "evidence_invalidated",
+        "approval_revoked"
+      ],
+      "safety_missing": [
+        "goal",
+        "affected_claims_derivable",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "execution_preserved": [],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "freeform_summary_plus_events",
+      "minified_bytes": 331,
+      "gzip_bytes": 224,
+      "estimated_tokens_4_bytes": 83,
+      "sha256": "97b1c78d8922e4373da87539ad1675b514c6c4cfb3afc97c3414f9deebc20976",
+      "safety_pass": false,
+      "safety_preserved": [
+        "evidence_invalidated",
+        "approval_revoked",
+        "recommendation_blocked"
+      ],
+      "safety_missing": [
+        "goal",
+        "affected_claims_derivable",
+        "license_unresolved",
+        "publication_blocked"
+      ],
+      "execution_preserved": [],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [],
+      "audit_missing": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "state_vector",
+      "minified_bytes": 512,
+      "gzip_bytes": 302,
+      "estimated_tokens_4_bytes": 128,
+      "sha256": "df613735e6c8706636f53560dce8ecdb1814d96526aa754d72e098d61615d95c",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "refresh_is_next"
+      ],
+      "execution_missing": [
+        "dependency_link_available",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [],
+      "audit_missing": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "structured_summary",
+      "minified_bytes": 536,
+      "gzip_bytes": 338,
+      "estimated_tokens_4_bytes": 134,
+      "sha256": "fdff54b8c056752d4fbd84ad9ffeea3b3583215060266cca193fe6eb07e4ed54",
+      "safety_pass": false,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [
+        "license_unresolved"
+      ],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "dependency_link_available",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "structured_summary_fixed",
+      "minified_bytes": 561,
+      "gzip_bytes": 353,
+      "estimated_tokens_4_bytes": 141,
+      "sha256": "3e2e39bfb8161e5937ccc0bf217eca101e4aac096c00a5d7ae770054c2835e51",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "dependency_link_available",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "incomplete_compact",
+      "minified_bytes": 684,
+      "gzip_bytes": 392,
+      "estimated_tokens_4_bytes": 171,
+      "sha256": "d57fb39141b65a70c97c6403552668d3798d7232067c6a4bb5a4956c779e763d",
+      "safety_pass": false,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [
+        "approval_revoked"
+      ],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "dependency_link_available",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "minimal_resolvable_amc",
+      "minified_bytes": 700,
+      "gzip_bytes": 372,
+      "estimated_tokens_4_bytes": 175,
+      "sha256": "9761860fb49bb2b34586316e0f7271e45c18fe52bdf07280a4b03b8f3dc8f9fb",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "execution_missing": [],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "compact_amc",
+      "minified_bytes": 782,
+      "gzip_bytes": 418,
+      "estimated_tokens_4_bytes": 196,
+      "sha256": "0f90c62035484a7c0194a2f6a14a5eb260c9046be8a2c5dc4cf425f44ba32ecc",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "compact_machine_constraints",
+      "minified_bytes": 788,
+      "gzip_bytes": 417,
+      "estimated_tokens_4_bytes": 197,
+      "sha256": "5ca5323e942c34a3dbd9b15e2bd5e129d364a6b7861c0d533fd3f00e75ef02c9",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "compact_gated",
+      "minified_bytes": 900,
+      "gzip_bytes": 421,
+      "estimated_tokens_4_bytes": 225,
+      "sha256": "b8e4a504b74d1428020b451d2e19ea1f2f1a0d1942ce6469d69a1ffa8d507c1d",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "negative_paraphrase",
+      "minified_bytes": 911,
+      "gzip_bytes": 465,
+      "estimated_tokens_4_bytes": 228,
+      "sha256": "a86791091c5d6cacce0a3692009316f092ca0849332e5a97b437c03d2b5e32ea",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "refresh_is_next"
+      ],
+      "execution_missing": [
+        "dependency_link_available",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "audit_preserved": [],
+      "audit_missing": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "compact_failure_space",
+      "minified_bytes": 929,
+      "gzip_bytes": 475,
+      "estimated_tokens_4_bytes": 233,
+      "sha256": "6538948535c2f1521604f47a07a7a115b00ad2b8a0d48772d745ba7918ce4bcf",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "affected_claims_explicit",
+        "dependency_link_available",
+        "refresh_is_next",
+        "completed_search"
+      ],
+      "execution_missing": [
+        "duplicate_guard"
+      ],
+      "audit_preserved": [
+        "history_resolvable"
+      ],
+      "audit_missing": [
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ]
+    },
+    {
+      "name": "deterministic_retrieval",
+      "minified_bytes": 2104,
+      "gzip_bytes": 863,
+      "estimated_tokens_4_bytes": 526,
+      "sha256": "7019fe8e2ff30ff8445cafd18370a0312cdf0608e1e99b1495e36f622e9a0216",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "dependency_link_available",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "refresh_is_next"
+      ],
+      "audit_preserved": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ],
+      "audit_missing": []
+    },
+    {
+      "name": "full_amc",
+      "minified_bytes": 2422,
+      "gzip_bytes": 1014,
+      "estimated_tokens_4_bytes": 606,
+      "sha256": "74b970d6e38c6a43d827f88a036de736197e2640e2b54a119f11e9469b8d41ce",
+      "safety_pass": false,
+      "safety_preserved": [
+        "goal",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked"
+      ],
+      "execution_preserved": [
+        "dependency_link_available",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "refresh_is_next"
+      ],
+      "audit_preserved": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ],
+      "audit_missing": []
+    },
+    {
+      "name": "full_amc_plus_events",
+      "minified_bytes": 2612,
+      "gzip_bytes": 1068,
+      "estimated_tokens_4_bytes": 653,
+      "sha256": "8777fd14f09ce46e0828b3589f12d36c59221d60d952f9c375d275eb40424a6b",
+      "safety_pass": true,
+      "safety_preserved": [
+        "goal",
+        "evidence_invalidated",
+        "affected_claims_derivable",
+        "approval_revoked",
+        "license_unresolved",
+        "recommendation_blocked",
+        "publication_blocked"
+      ],
+      "safety_missing": [],
+      "execution_preserved": [
+        "dependency_link_available",
+        "completed_search",
+        "duplicate_guard"
+      ],
+      "execution_missing": [
+        "affected_claims_explicit",
+        "refresh_is_next"
+      ],
+      "audit_preserved": [
+        "history_resolvable",
+        "inferred_claim_preserved",
+        "evidence_locator_preserved"
+      ],
+      "audit_missing": []
+    }
+  ],
+  "pareto_frontier": [
+    "deterministic_retrieval",
+    "minimal_resolvable_amc",
+    "state_vector",
+    "structured_summary_fixed"
+  ],
+  "transport": {
+    "repeat_full_two_turn_bytes": 5034,
+    "base_then_delta_two_turn_bytes": 2601,
+    "compact_snapshots_two_turn_bytes": 1400,
+    "delta_reduction_vs_full_repeat_percent": 48.331,
+    "compact_snapshot_reduction_vs_full_repeat_percent": 72.189
+  },
+  "comparisons": {
+    "minimal_resolvable_vs_full_current_percent_smaller": 73.201,
+    "minimal_resolvable_vs_compact_percent_smaller": 10.486
+  },
+  "limitations": [
+    "This grader measures information availability, not model comprehension or action quality.",
+    "The result uses one synthetic research workflow and cannot establish generality.",
+    "The fact extractor is format-aware and could miss valid unrecognized paraphrases.",
+    "The four-bytes-per-token value is only a rough estimate; raw bytes are the primary metric.",
+    "Gzip size measures storage/transport compression, not context-window usage.",
+    "A history reference is counted as resolvable syntactically; this run does not test resolver uptime or authorization."
+  ]
+}

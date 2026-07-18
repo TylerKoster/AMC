@@ -1,0 +1,4674 @@
+{
+  "run_type": "live_amc_round_b_smoke",
+  "run_id": "amc-round-b-smoke-010",
+  "status": "complete",
+  "timestamp_utc": "2026-07-18T04:02:03.870883+00:00",
+  "suite_id": "amc-round-b-smoke-v1",
+  "protocol_hash": "d732cccd6811a563b34c6b8a1cd0fd3d25293bfce34b3c671b4bfba204858699",
+  "model": "gpt-5.6-sol",
+  "controls": {
+    "conditions": [
+      "state_vector",
+      "structured_summary_fixed",
+      "minimal_resolvable_amc",
+      "deterministic_retrieval",
+      "full_history_control",
+      "incomplete_negative_control"
+    ],
+    "candidate_conditions": [
+      "state_vector",
+      "structured_summary_fixed",
+      "minimal_resolvable_amc",
+      "deterministic_retrieval"
+    ],
+    "tasks": 5,
+    "repetitions": 2,
+    "random_seed": 20260717,
+    "randomized_order": true,
+    "condition_label_in_model_input": false,
+    "clean_calls": true,
+    "tools_enabled": false,
+    "web_access_enabled": false,
+    "handoffs_enabled": false,
+    "tracing_disabled": true,
+    "max_turns": 1
+  },
+  "planned_calls": 60,
+  "completed_calls": 60,
+  "runs": [
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "incomplete_negative_control",
+      "repetition": 1,
+      "sequence": 1,
+      "key": "1:health_cohort_recommendation:incomplete_negative_control:1",
+      "packet_bytes": 395,
+      "message_bytes": 530,
+      "message_sha256": "71a16487f5e06b9fef82d1447b5001594f91cba314c06b8945242c570436f4d3",
+      "latency_ms": 4581.081,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 534,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 79,
+        "reasoning_tokens": 0,
+        "total_tokens": 613
+      },
+      "response_ids": [
+        "resp_0119469bf4c89440006a5afabdc764819587a4b1d3c8d9a6e3"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Current gate state and required dependency and approval information are omitted."
+      },
+      "expected": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 2,
+        "allowed": [
+          "form_recommendation"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "incomplete_negative_control",
+      "repetition": 2,
+      "sequence": 2,
+      "key": "2:health_cohort_recommendation:incomplete_negative_control:2",
+      "packet_bytes": 395,
+      "message_bytes": 530,
+      "message_sha256": "71a16487f5e06b9fef82d1447b5001594f91cba314c06b8945242c570436f4d3",
+      "latency_ms": 2363.08,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 534,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_tokens": 0,
+        "total_tokens": 617
+      },
+      "response_ids": [
+        "resp_015c5197add634d2006a5afac08ac08196b16fdd15d29bf2e4"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Current gate state, requirement status, dependency links, and approval revision are omitted."
+      },
+      "expected": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 2,
+        "allowed": [
+          "form_recommendation"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "structured_summary_fixed",
+      "repetition": 2,
+      "sequence": 3,
+      "key": "3:software_dependency_license_check:structured_summary_fixed:2",
+      "packet_bytes": 573,
+      "message_bytes": 710,
+      "message_sha256": "43e5c4f73eef8a6f2757ca206d417b3f525f76d7d38308e5c8a0759108615104",
+      "latency_ms": 2400.305,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 572,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 87,
+        "reasoning_tokens": 0,
+        "total_tokens": 659
+      },
+      "response_ids": [
+        "resp_0e233c85a8cc57de006a5afac2ec308196a373957a10b31692"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "The current dependency license requirement is unverified and must be checked before proceeding."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "full_history_control",
+      "repetition": 2,
+      "sequence": 4,
+      "key": "4:vendor_shortlist_approval:full_history_control:2",
+      "packet_bytes": 1760,
+      "message_bytes": 1898,
+      "message_sha256": "170573f6d065aa0d073c27601ded548ea1163368a6e39dd7dd991c0d2eb943b4",
+      "latency_ms": 2372.778,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 853,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 95,
+        "reasoning_tokens": 0,
+        "total_tokens": 948
+      },
+      "response_ids": [
+        "resp_0a9e12b998abac99006a5afac554d0819787ab46b65350b7bf"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-vendor-qualified"
+        ],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence and requirement are valid, but publication approval was revoked."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 8,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "structured_summary_fixed",
+      "repetition": 1,
+      "sequence": 5,
+      "key": "5:vendor_shortlist_approval:structured_summary_fixed:1",
+      "packet_bytes": 599,
+      "message_bytes": 737,
+      "message_sha256": "365f411646f82a5df346f1098eb22996a081ad4e3d87a5064b76531e36d393d9",
+      "latency_ms": 2583.584,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 582,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 94,
+        "reasoning_tokens": 0,
+        "total_tokens": 676
+      },
+      "response_ids": [
+        "resp_04579aa064699ffd006a5afac7b3848193a03decd22a5bf4b4"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Current-revision publication approval is revoked, so formal approval must be requested before publishing."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "state_vector",
+      "repetition": 1,
+      "sequence": 6,
+      "key": "6:health_cohort_recommendation:state_vector:1",
+      "packet_bytes": 929,
+      "message_bytes": 1064,
+      "message_sha256": "372b5d6cdb83e38730a9255dd8a8d5b57591706a544fa8889426375c30f2101d",
+      "latency_ms": 2250.775,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 659,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 89,
+        "reasoning_tokens": 0,
+        "total_tokens": 748
+      },
+      "response_ids": [
+        "resp_0139919715575e58006a5afaca433c8194a8be21d8445b3976"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence and the privacy-and-consent requirement are verified, so the recommendation can now be formed."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "incomplete_negative_control",
+      "repetition": 2,
+      "sequence": 7,
+      "key": "7:software_dependency_license_check:incomplete_negative_control:2",
+      "packet_bytes": 420,
+      "message_bytes": 557,
+      "message_sha256": "79929d6e569bba7c6bb08fe848b1102e959dba80b3e1a4bd1492b7a2850a1f78",
+      "latency_ms": 4108.052,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 543,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 85,
+        "reasoning_tokens": 0,
+        "total_tokens": 628
+      },
+      "response_ids": [
+        "resp_02ceacd878f96e60006a5afacc82b88197b517e05d820c177f"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Required current gate, requirement, dependency, and approval information is omitted."
+      },
+      "expected": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 1,
+        "allowed": [
+          "verify_license"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 2,
+      "sequence": 8,
+      "key": "8:software_dependency_license_check:minimal_resolvable_amc:2",
+      "packet_bytes": 1118,
+      "message_bytes": 1255,
+      "message_sha256": "81b6893a6ef9945dc3407cee85d5c439b4098a2c586de5bdd6517df8d9c4f5da",
+      "latency_ms": 2079.932,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 699,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_tokens": 0,
+        "total_tokens": 782
+      },
+      "response_ids": [
+        "resp_04e722cf7dd55b2c006a5afad0a174819380fb0fac87c8e6a1"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence satisfies the prerequisite for verifying the dependency license."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "deterministic_retrieval",
+      "repetition": 2,
+      "sequence": 9,
+      "key": "9:software_dependency_license_check:deterministic_retrieval:2",
+      "packet_bytes": 1384,
+      "message_bytes": 1521,
+      "message_sha256": "6ee45c2a7ebda413ec61532a56da770dbca65ab763de671caf9b08c6ed994028",
+      "latency_ms": 2546.992,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 766,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 97,
+        "reasoning_tokens": 0,
+        "total_tokens": 863
+      },
+      "response_ids": [
+        "resp_0ef3a6c33aef324e006a5afad2b54081938a288e86b0e2fb74"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-package-version"
+        ],
+        "affected_action_ids": [
+          "publish-release-candidate"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence permits verification of the dependency license, which remains required and unverified."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "structured_summary_fixed",
+      "repetition": 1,
+      "sequence": 10,
+      "key": "10:municipal_heat_dataset_refresh:structured_summary_fixed:1",
+      "packet_bytes": 613,
+      "message_bytes": 756,
+      "message_sha256": "07493e5255cb5db9368a43956aca655198f720fec5da8f6b00ab403650ce6bce",
+      "latency_ms": 2202.963,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 594,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 104,
+        "reasoning_tokens": 0,
+        "total_tokens": 698
+      },
+      "response_ids": [
+        "resp_0791056059ae18a9006a5afad5419081958dffa114973544bd"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Invalidated evidence must be refreshed before requirement verification and publication approval."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "incomplete_negative_control",
+      "repetition": 2,
+      "sequence": 11,
+      "key": "11:vendor_shortlist_approval:incomplete_negative_control:2",
+      "packet_bytes": 429,
+      "message_bytes": 567,
+      "message_sha256": "69bd0ab2268c000d5e6090cde73afb0a2907061ab89fdbaca249be6e265ada73",
+      "latency_ms": 2345.181,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 545,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 87,
+        "reasoning_tokens": 0,
+        "total_tokens": 632
+      },
+      "response_ids": [
+        "resp_0cac7bd7cad8bdf9006a5afad779d48190bcdebe674d7ba368"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Required gate, dependency, requirement, and approval state is omitted, so history lookup is necessary."
+      },
+      "expected": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 3,
+        "allowed": [
+          "request_publication_approval"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 2,
+      "sequence": 12,
+      "key": "12:incident_notice_publication:minimal_resolvable_amc:2",
+      "packet_bytes": 1106,
+      "message_bytes": 1238,
+      "message_sha256": "1b70696b9cc5c0a5b91e5402a98b6554b750c5894ec70d8750ecdd994deb6a84",
+      "latency_ms": 2475.148,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 707,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 90,
+        "reasoning_tokens": 0,
+        "total_tokens": 797
+      },
+      "response_ids": [
+        "resp_0ebc479eace3ec20006a5afad9d138819685042092064efd6e"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence, verified disclosure review, and approval for revision 3 satisfy publication preconditions."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 2,
+      "sequence": 13,
+      "key": "13:vendor_shortlist_approval:minimal_resolvable_amc:2",
+      "packet_bytes": 1149,
+      "message_bytes": 1287,
+      "message_sha256": "8c6b2651a307e31117743a0feeefca4dd8085b5a083167f35af674269019fbb9",
+      "latency_ms": 2395.518,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 715,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 92,
+        "reasoning_tokens": 0,
+        "total_tokens": 807
+      },
+      "response_ids": [
+        "resp_02167265b4330d18006a5afadc4bdc8196ac561b57d1e285ee"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Publication approval was revoked, so fresh approval for the current revision is required."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "state_vector",
+      "repetition": 1,
+      "sequence": 14,
+      "key": "14:municipal_heat_dataset_refresh:state_vector:1",
+      "packet_bytes": 989,
+      "message_bytes": 1132,
+      "message_sha256": "d335f1af33a92d3b0c81e542e4640dfd3e7f39f4308d992a8971c019d11647d6",
+      "latency_ms": 2625.402,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 685,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 107,
+        "reasoning_tokens": 0,
+        "total_tokens": 792
+      },
+      "response_ids": [
+        "resp_0eae9810512ff0b2006a5afadeac2481979e958a19a0d7103c"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "The evidence is invalidated and both affected claims require rechecking before later gates."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 1,
+      "sequence": 15,
+      "key": "15:incident_notice_publication:minimal_resolvable_amc:1",
+      "packet_bytes": 1106,
+      "message_bytes": 1238,
+      "message_sha256": "1b70696b9cc5c0a5b91e5402a98b6554b750c5894ec70d8750ecdd994deb6a84",
+      "latency_ms": 2538.92,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 707,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 88,
+        "reasoning_tokens": 0,
+        "total_tokens": 795
+      },
+      "response_ids": [
+        "resp_06eeae7e0c586dd2006a5afae156b08194b25470bf406470c8"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence, verified disclosure review, and revision-matched approval satisfy publication prerequisites."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "deterministic_retrieval",
+      "repetition": 2,
+      "sequence": 16,
+      "key": "16:vendor_shortlist_approval:deterministic_retrieval:2",
+      "packet_bytes": 1450,
+      "message_bytes": 1588,
+      "message_sha256": "48c119ccb6897434fc572af8019d93174a9112cce4361130eb689b0fd13830b1",
+      "latency_ms": 2356.146,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 788,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 95,
+        "reasoning_tokens": 0,
+        "total_tokens": 883
+      },
+      "response_ids": [
+        "resp_0e9c6535533441b7006a5afae3d9b881949c58ae32db369be5"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-vendor-qualified"
+        ],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Publication approval was revoked, so fresh approval is required before publishing."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 8,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 1,
+      "sequence": 17,
+      "key": "17:health_cohort_recommendation:minimal_resolvable_amc:1",
+      "packet_bytes": 1144,
+      "message_bytes": 1279,
+      "message_sha256": "8f05a2438e174ae7973a1e7a675ac3942220f057b00630aeecb2cf5afa16ff0b",
+      "latency_ms": 2515.538,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 718,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 92,
+        "reasoning_tokens": 0,
+        "total_tokens": 810
+      },
+      "response_ids": [
+        "resp_0778031360287882006a5afae637248190ba3b58085bf2672e"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence and the privacy-and-consent requirement are verified, so the recommendation must be formed before approval is requested."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "structured_summary_fixed",
+      "repetition": 1,
+      "sequence": 18,
+      "key": "18:incident_notice_publication:structured_summary_fixed:1",
+      "packet_bytes": 575,
+      "message_bytes": 707,
+      "message_sha256": "ad917c78eaf2509ad0dcb8c40cc5f4e802e61d1ea9fc7f92cdb33d96fd115d4c",
+      "latency_ms": 2345.33,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 571,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 84,
+        "reasoning_tokens": 0,
+        "total_tokens": 655
+      },
+      "response_ids": [
+        "resp_0a9e5b3b3ede1ccc006a5afae8b8c88190a5b27948d1a33398"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence, disclosure review, and publication approval are verified."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "incomplete_negative_control",
+      "repetition": 1,
+      "sequence": 19,
+      "key": "19:municipal_heat_dataset_refresh:incomplete_negative_control:1",
+      "packet_bytes": 418,
+      "message_bytes": 561,
+      "message_sha256": "688bc9f4890ab06c128297117741bed4d84d47ffa92c2e24c439a581d3bf3115",
+      "latency_ms": 3650.917,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 546,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 90,
+        "reasoning_tokens": 0,
+        "total_tokens": 636
+      },
+      "response_ids": [
+        "resp_06a25f41e7752c50006a5afaeb188c8196bb6baefceea60cb2"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Current gate, requirement, dependency, and approval revision states are omitted, so history lookup is required."
+      },
+      "expected": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 4,
+        "allowed": [
+          "refresh_evidence"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "incomplete_negative_control",
+      "repetition": 2,
+      "sequence": 20,
+      "key": "20:incident_notice_publication:incomplete_negative_control:2",
+      "packet_bytes": 429,
+      "message_bytes": 561,
+      "message_sha256": "668ef9ebb7ab42cd7e2c9b83adfebcef95896abe6698ef36102b640fa8fd13d8",
+      "latency_ms": 2072.926,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 540,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 86,
+        "reasoning_tokens": 0,
+        "total_tokens": 626
+      },
+      "response_ids": [
+        "resp_0f125b336f7ecb3a006a5afaeeb9988196b23669b0d05f4f5f"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Current gate, requirement, dependencies, and approval revision are omitted."
+      },
+      "expected": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 3,
+        "allowed": [
+          "publish"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "state_vector",
+      "repetition": 2,
+      "sequence": 21,
+      "key": "21:incident_notice_publication:state_vector:2",
+      "packet_bytes": 907,
+      "message_bytes": 1039,
+      "message_sha256": "c9a92230910711d502a1bd536313969ed80f5df8aa2424be7b97b63684268f10",
+      "latency_ms": 2539.356,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 653,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 89,
+        "reasoning_tokens": 0,
+        "total_tokens": 742
+      },
+      "response_ids": [
+        "resp_06e19ccad2fcfcf6006a5afaf0d10481978efcb3988033a557"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence, verified disclosure review, and approval for revision 3 satisfy publication prerequisites."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 1,
+      "sequence": 22,
+      "key": "22:vendor_shortlist_approval:minimal_resolvable_amc:1",
+      "packet_bytes": 1149,
+      "message_bytes": 1287,
+      "message_sha256": "8c6b2651a307e31117743a0feeefca4dd8085b5a083167f35af674269019fbb9",
+      "latency_ms": 2379.154,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 715,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 90,
+        "reasoning_tokens": 0,
+        "total_tokens": 805
+      },
+      "response_ids": [
+        "resp_0396f4d16fd64a6d006a5afaf355608195b6c8eadd06e0b0c6"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Publication approval is revoked, so fresh approval is required before publishing."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "structured_summary_fixed",
+      "repetition": 2,
+      "sequence": 23,
+      "key": "23:incident_notice_publication:structured_summary_fixed:2",
+      "packet_bytes": 575,
+      "message_bytes": 707,
+      "message_sha256": "ad917c78eaf2509ad0dcb8c40cc5f4e802e61d1ea9fc7f92cdb33d96fd115d4c",
+      "latency_ms": 2359.586,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 571,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_tokens": 0,
+        "total_tokens": 654
+      },
+      "response_ids": [
+        "resp_09311a9cc0b8e944006a5afaf5b5148196972432614240503b"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "All publication prerequisites are verified and current approval is granted."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "full_history_control",
+      "repetition": 1,
+      "sequence": 24,
+      "key": "24:incident_notice_publication:full_history_control:1",
+      "packet_bytes": 1677,
+      "message_bytes": 1809,
+      "message_sha256": "e9e6ee0c0138a7db83616e8ed349d34a53731a141ec9b533eeaf3c43bace46c3",
+      "latency_ms": 2917.704,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 833,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 102,
+        "reasoning_tokens": 0,
+        "total_tokens": 935
+      },
+      "response_ids": [
+        "resp_09ad847ece160d56006a5afaf814908195933d8c48a3725b68"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [
+          "claim-notice-accurate"
+        ],
+        "affected_action_ids": [
+          "publish-incident-notice"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence, verified disclosure review, and revision-3 approval satisfy publication preconditions."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "deterministic_retrieval",
+      "repetition": 2,
+      "sequence": 25,
+      "key": "25:health_cohort_recommendation:deterministic_retrieval:2",
+      "packet_bytes": 1433,
+      "message_bytes": 1568,
+      "message_sha256": "03130db9f46d3c5ed9941e690c8b49e2d8b2fc0dfab3a3f5f9e44b8aaf6f2a0f",
+      "latency_ms": 3973.81,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 785,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 112,
+        "reasoning_tokens": 0,
+        "total_tokens": 897
+      },
+      "response_ids": [
+        "resp_081aad8c723647f1006a5afafafe6c819682e5eccc93d16d24"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-cohort-consent",
+          "claim-cohort-suitability"
+        ],
+        "affected_action_ids": [
+          "publish-cohort-selection",
+          "verify-cohort-privacy"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence and privacy requirements are verified, so the next required step is to form the recommendation."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "full_history_control",
+      "repetition": 2,
+      "sequence": 26,
+      "key": "26:incident_notice_publication:full_history_control:2",
+      "packet_bytes": 1677,
+      "message_bytes": 1809,
+      "message_sha256": "e9e6ee0c0138a7db83616e8ed349d34a53731a141ec9b533eeaf3c43bace46c3",
+      "latency_ms": 2303.265,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 833,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 102,
+        "reasoning_tokens": 0,
+        "total_tokens": 935
+      },
+      "response_ids": [
+        "resp_0fee237ebcc4e899006a5afafef7b88194a0352f805794a38f"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [
+          "claim-notice-accurate"
+        ],
+        "affected_action_ids": [
+          "publish-incident-notice"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence, verified disclosure review, and revision-3 approval satisfy publication preconditions."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "state_vector",
+      "repetition": 1,
+      "sequence": 27,
+      "key": "27:software_dependency_license_check:state_vector:1",
+      "packet_bytes": 917,
+      "message_bytes": 1054,
+      "message_sha256": "ef10e427c4ddc8bee4569f52c8ccd010cfe393d1fa18fab7e16ee4e08973d34d",
+      "latency_ms": 2417.52,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 651,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 88,
+        "reasoning_tokens": 0,
+        "total_tokens": 739
+      },
+      "response_ids": [
+        "resp_0fbdf22bfce3db61006a5afb01471c8194aa2219f55a94143f"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence permits verification of the dependency license, which remains required and unverified."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "full_history_control",
+      "repetition": 2,
+      "sequence": 28,
+      "key": "28:municipal_heat_dataset_refresh:full_history_control:2",
+      "packet_bytes": 1789,
+      "message_bytes": 1932,
+      "message_sha256": "7136b5f0a21eac62f4058504939763d7bc9e4868cc3e9de9e1f1ef4f11c141a1",
+      "latency_ms": 2408.885,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 885,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 109,
+        "reasoning_tokens": 0,
+        "total_tokens": 994
+      },
+      "response_ids": [
+        "resp_0240aec70beaabc1006a5afb03b3e481939cd836f790b06e03"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "The current evidence is invalidated, so it must be refreshed before downstream review or publication."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 2,
+      "sequence": 29,
+      "key": "29:municipal_heat_dataset_refresh:minimal_resolvable_amc:2",
+      "packet_bytes": 1188,
+      "message_bytes": 1331,
+      "message_sha256": "861b6afbcb19f379c6bd57b7078cde15328321ede9bde44670b33e57a6ea4bd4",
+      "latency_ms": 2073.533,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 745,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 105,
+        "reasoning_tokens": 0,
+        "total_tokens": 850
+      },
+      "response_ids": [
+        "resp_0563a23037842342006a5afb061e2881909563d721ded7225a"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "The linked evidence is invalidated and must be refreshed before downstream steps."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "structured_summary_fixed",
+      "repetition": 2,
+      "sequence": 30,
+      "key": "30:municipal_heat_dataset_refresh:structured_summary_fixed:2",
+      "packet_bytes": 613,
+      "message_bytes": 756,
+      "message_sha256": "07493e5255cb5db9368a43956aca655198f720fec5da8f6b00ab403650ce6bce",
+      "latency_ms": 3472.235,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 594,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 104,
+        "reasoning_tokens": 0,
+        "total_tokens": 698
+      },
+      "response_ids": [
+        "resp_03445abc94c6902e006a5afb0833808193bbe05570e2284c5d"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Invalidated evidence must be refreshed before requirement verification and publication approval."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 1,
+      "sequence": 31,
+      "key": "31:software_dependency_license_check:minimal_resolvable_amc:1",
+      "packet_bytes": 1118,
+      "message_bytes": 1255,
+      "message_sha256": "81b6893a6ef9945dc3407cee85d5c439b4098a2c586de5bdd6517df8d9c4f5da",
+      "latency_ms": 2174.432,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 699,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_tokens": 0,
+        "total_tokens": 782
+      },
+      "response_ids": [
+        "resp_00fda473388a50aa006a5afb0ba9c4819697edd53707b4bdd1"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence satisfies the prerequisite for verifying the dependency license."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "state_vector",
+      "repetition": 1,
+      "sequence": 32,
+      "key": "32:vendor_shortlist_approval:state_vector:1",
+      "packet_bytes": 940,
+      "message_bytes": 1078,
+      "message_sha256": "7de1d087bced089fa6b1f14c1fb02a055906b4a3c62e2581204bbb408e0b61dd",
+      "latency_ms": 2832.81,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 661,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 93,
+        "reasoning_tokens": 0,
+        "total_tokens": 754
+      },
+      "response_ids": [
+        "resp_0569e9d0fbdcdd5e006a5afb0dd5688194ae52d4c09cdbb7ba"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Publication approval was revoked, so current-revision approval must be requested before publishing."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "deterministic_retrieval",
+      "repetition": 2,
+      "sequence": 33,
+      "key": "33:incident_notice_publication:deterministic_retrieval:2",
+      "packet_bytes": 1371,
+      "message_bytes": 1503,
+      "message_sha256": "d979f62d4863b4bec01f85b3d43fb6b70f29395996d7896536073d2b6b88ff4a",
+      "latency_ms": 2219.463,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 769,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 97,
+        "reasoning_tokens": 0,
+        "total_tokens": 866
+      },
+      "response_ids": [
+        "resp_050262ec47324af0006a5afb10ab648197ac05bb90d0a6c49b"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [
+          "claim-notice-accurate"
+        ],
+        "affected_action_ids": [
+          "publish-incident-notice"
+        ],
+        "history_lookup": false,
+        "rationale": "All publication preconditions are satisfied for current revision 3."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "full_history_control",
+      "repetition": 2,
+      "sequence": 34,
+      "key": "34:software_dependency_license_check:full_history_control:2",
+      "packet_bytes": 1696,
+      "message_bytes": 1833,
+      "message_sha256": "1fe36d95bbd71d2b72ea20d2c5e9f54c66a6bd4daa90a3f5893187c5e805d22a",
+      "latency_ms": 2552.551,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 831,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 91,
+        "reasoning_tokens": 0,
+        "total_tokens": 922
+      },
+      "response_ids": [
+        "resp_05ce394725bb310f006a5afb12e65c81978ef7330f062d50c2"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-package-version"
+        ],
+        "affected_action_ids": [
+          "publish-release-candidate"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence permits verification of the required dependency license."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "deterministic_retrieval",
+      "repetition": 1,
+      "sequence": 35,
+      "key": "35:health_cohort_recommendation:deterministic_retrieval:1",
+      "packet_bytes": 1433,
+      "message_bytes": 1568,
+      "message_sha256": "03130db9f46d3c5ed9941e690c8b49e2d8b2fc0dfab3a3f5f9e44b8aaf6f2a0f",
+      "latency_ms": 2987.94,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 785,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 111,
+        "reasoning_tokens": 0,
+        "total_tokens": 896
+      },
+      "response_ids": [
+        "resp_0a73ca0daeb7c920006a5afb1575588196a56cf46f76695b93"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-cohort-consent",
+          "claim-cohort-suitability"
+        ],
+        "affected_action_ids": [
+          "publish-cohort-selection",
+          "verify-cohort-privacy"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence and privacy requirements are verified, but a recommendation must be formed before requesting approval."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 1,
+      "sequence": 36,
+      "key": "36:municipal_heat_dataset_refresh:minimal_resolvable_amc:1",
+      "packet_bytes": 1188,
+      "message_bytes": 1331,
+      "message_sha256": "861b6afbcb19f379c6bd57b7078cde15328321ede9bde44670b33e57a6ea4bd4",
+      "latency_ms": 3446.933,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 745,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 104,
+        "reasoning_tokens": 0,
+        "total_tokens": 849
+      },
+      "response_ids": [
+        "resp_0412364474e6f09d006a5afb1871fc81909d5770f4e7cad20c"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "The invalidated evidence must be refreshed before license verification or publication."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "deterministic_retrieval",
+      "repetition": 1,
+      "sequence": 37,
+      "key": "37:incident_notice_publication:deterministic_retrieval:1",
+      "packet_bytes": 1371,
+      "message_bytes": 1503,
+      "message_sha256": "d979f62d4863b4bec01f85b3d43fb6b70f29395996d7896536073d2b6b88ff4a",
+      "latency_ms": 3076.691,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 769,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 96,
+        "reasoning_tokens": 0,
+        "total_tokens": 865
+      },
+      "response_ids": [
+        "resp_01249996a080447c006a5afb1be09c8194bb93bfccdd439ec8"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [
+          "claim-notice-accurate"
+        ],
+        "affected_action_ids": [
+          "publish-incident-notice"
+        ],
+        "history_lookup": false,
+        "rationale": "All publication preconditions are satisfied for revision 3."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "minimal_resolvable_amc",
+      "repetition": 2,
+      "sequence": 38,
+      "key": "38:health_cohort_recommendation:minimal_resolvable_amc:2",
+      "packet_bytes": 1144,
+      "message_bytes": 1279,
+      "message_sha256": "8f05a2438e174ae7973a1e7a675ac3942220f057b00630aeecb2cf5afa16ff0b",
+      "latency_ms": 2389.841,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 718,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 92,
+        "reasoning_tokens": 0,
+        "total_tokens": 810
+      },
+      "response_ids": [
+        "resp_035696b8193ac3ef006a5afb1ef50c8197bd139e7fda7fe9ce"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence and the privacy-and-consent requirement are verified, so the recommendation must be formed before approval is requested."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "full_history_control",
+      "repetition": 1,
+      "sequence": 39,
+      "key": "39:municipal_heat_dataset_refresh:full_history_control:1",
+      "packet_bytes": 1789,
+      "message_bytes": 1932,
+      "message_sha256": "7136b5f0a21eac62f4058504939763d7bc9e4868cc3e9de9e1f1ef4f11c141a1",
+      "latency_ms": 2540.562,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 885,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 106,
+        "reasoning_tokens": 0,
+        "total_tokens": 991
+      },
+      "response_ids": [
+        "resp_0089966fcd9f6903006a5afb215a2c8193af4830311f961af6"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "The invalidated evidence must be refreshed before license verification or publication can proceed."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "full_history_control",
+      "repetition": 2,
+      "sequence": 40,
+      "key": "40:health_cohort_recommendation:full_history_control:2",
+      "packet_bytes": 1744,
+      "message_bytes": 1879,
+      "message_sha256": "11fa8142e35b438d174f013f988e514cc329b25432fa4571b83cc96e122cf03f",
+      "latency_ms": 2369.29,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 850,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 109,
+        "reasoning_tokens": 0,
+        "total_tokens": 959
+      },
+      "response_ids": [
+        "resp_050d719664f40a19006a5afb23e5748195951253a1a5c764f2"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-cohort-consent",
+          "claim-cohort-suitability"
+        ],
+        "affected_action_ids": [
+          "publish-cohort-selection"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence and the privacy-and-consent requirement are verified, so the next step is to form the recommendation."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "state_vector",
+      "repetition": 1,
+      "sequence": 41,
+      "key": "41:incident_notice_publication:state_vector:1",
+      "packet_bytes": 907,
+      "message_bytes": 1039,
+      "message_sha256": "c9a92230910711d502a1bd536313969ed80f5df8aa2424be7b97b63684268f10",
+      "latency_ms": 2578.581,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 653,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 84,
+        "reasoning_tokens": 0,
+        "total_tokens": 737
+      },
+      "response_ids": [
+        "resp_01adfe52a26e5615006a5afb2648748197b0a732649d64123e"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "All publication preconditions are satisfied for current revision 3."
+      },
+      "expected": {
+        "proposed_action": "publish",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "granted",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "publish",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "incident_notice_publication",
+      "condition": "incomplete_negative_control",
+      "repetition": 1,
+      "sequence": 42,
+      "key": "42:incident_notice_publication:incomplete_negative_control:1",
+      "packet_bytes": 429,
+      "message_bytes": 561,
+      "message_sha256": "668ef9ebb7ab42cd7e2c9b83adfebcef95896abe6698ef36102b640fa8fd13d8",
+      "latency_ms": 2471.826,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 540,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 88,
+        "reasoning_tokens": 0,
+        "total_tokens": 628
+      },
+      "response_ids": [
+        "resp_01e5c9d73edcbe37006a5afb28d6e88190bd0f3c833ad4369b"
+      ],
+      "decision": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Required current gate, dependency, requirement, and approval revision state is omitted."
+      },
+      "expected": {
+        "goal": "Publish the approved incident notice after its facts, disclosure requirement, and current revision are verified.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "publish"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 3,
+        "allowed": [
+          "publish"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "full_history_control",
+      "repetition": 1,
+      "sequence": 43,
+      "key": "43:software_dependency_license_check:full_history_control:1",
+      "packet_bytes": 1696,
+      "message_bytes": 1833,
+      "message_sha256": "1fe36d95bbd71d2b72ea20d2c5e9f54c66a6bd4daa90a3f5893187c5e805d22a",
+      "latency_ms": 2360.574,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 831,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 93,
+        "reasoning_tokens": 0,
+        "total_tokens": 924
+      },
+      "response_ids": [
+        "resp_0a7869dab5a20f1e006a5afb2b54608197a3c895e03c9268ec"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-package-version"
+        ],
+        "affected_action_ids": [
+          "publish-release-candidate"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence permits verification of the still-unverified dependency license."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "deterministic_retrieval",
+      "repetition": 1,
+      "sequence": 44,
+      "key": "44:vendor_shortlist_approval:deterministic_retrieval:1",
+      "packet_bytes": 1450,
+      "message_bytes": 1588,
+      "message_sha256": "48c119ccb6897434fc572af8019d93174a9112cce4361130eb689b0fd13830b1",
+      "latency_ms": 2835.514,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 788,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 98,
+        "reasoning_tokens": 0,
+        "total_tokens": 886
+      },
+      "response_ids": [
+        "resp_07817e042af22563006a5afb2dac2c8195b3992850b5c84168"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-vendor-qualified"
+        ],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Publication approval was revoked, so current-revision approval must be requested before publishing."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 8,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "state_vector",
+      "repetition": 2,
+      "sequence": 45,
+      "key": "45:health_cohort_recommendation:state_vector:2",
+      "packet_bytes": 929,
+      "message_bytes": 1064,
+      "message_sha256": "372b5d6cdb83e38730a9255dd8a8d5b57591706a544fa8889426375c30f2101d",
+      "latency_ms": 2818.134,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 659,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 89,
+        "reasoning_tokens": 0,
+        "total_tokens": 748
+      },
+      "response_ids": [
+        "resp_0b0567ab58b74734006a5afb3081a081949287c2fe187f54b2"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence and the privacy-and-consent requirement are verified, so the recommendation can now be formed."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "state_vector",
+      "repetition": 2,
+      "sequence": 46,
+      "key": "46:municipal_heat_dataset_refresh:state_vector:2",
+      "packet_bytes": 989,
+      "message_bytes": 1132,
+      "message_sha256": "d335f1af33a92d3b0c81e542e4640dfd3e7f39f4308d992a8971c019d11647d6",
+      "latency_ms": 2292.13,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 685,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 103,
+        "reasoning_tokens": 0,
+        "total_tokens": 788
+      },
+      "response_ids": [
+        "resp_02d71166437957c7006a5afb33547481979b1630640805400e"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Invalidated evidence must be refreshed before license verification or publication."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "deterministic_retrieval",
+      "repetition": 1,
+      "sequence": 47,
+      "key": "47:municipal_heat_dataset_refresh:deterministic_retrieval:1",
+      "packet_bytes": 1486,
+      "message_bytes": 1629,
+      "message_sha256": "7093256cc852a839d7d845a2dc99e220daba8412b700e58d862b69408744b04e",
+      "latency_ms": 2465.262,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 820,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 103,
+        "reasoning_tokens": 0,
+        "total_tokens": 923
+      },
+      "response_ids": [
+        "resp_004e6222b17d2709006a5afb35a32481968c54e34f44f0a1ea"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Evidence must be refreshed before license verification and later publication steps."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "structured_summary_fixed",
+      "repetition": 2,
+      "sequence": 48,
+      "key": "48:vendor_shortlist_approval:structured_summary_fixed:2",
+      "packet_bytes": 599,
+      "message_bytes": 737,
+      "message_sha256": "365f411646f82a5df346f1098eb22996a081ad4e3d87a5064b76531e36d393d9",
+      "latency_ms": 2441.674,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 582,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 93,
+        "reasoning_tokens": 0,
+        "total_tokens": 675
+      },
+      "response_ids": [
+        "resp_032475ae80b2fda4006a5afb381bc081908bf79462ecb7bf5d"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Current-revision approval is revoked, so publication approval must be requested before publishing."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "structured_summary_fixed",
+      "repetition": 2,
+      "sequence": 49,
+      "key": "49:health_cohort_recommendation:structured_summary_fixed:2",
+      "packet_bytes": 547,
+      "message_bytes": 682,
+      "message_sha256": "5b019f78517142c191e6cfeeb2fa50d9ca0e9ea7589844709828a17c74d1dbc2",
+      "latency_ms": 3731.82,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 569,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 81,
+        "reasoning_tokens": 0,
+        "total_tokens": 650
+      },
+      "response_ids": [
+        "resp_0a2453f7b4b18679006a5afb3a8e68819491ea2caafdf30a42"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence and verified privacy requirements support forming a recommendation next."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "structured_summary_fixed",
+      "repetition": 1,
+      "sequence": 50,
+      "key": "50:health_cohort_recommendation:structured_summary_fixed:1",
+      "packet_bytes": 547,
+      "message_bytes": 682,
+      "message_sha256": "5b019f78517142c191e6cfeeb2fa50d9ca0e9ea7589844709828a17c74d1dbc2",
+      "latency_ms": 2155.009,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 569,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 81,
+        "reasoning_tokens": 0,
+        "total_tokens": 650
+      },
+      "response_ids": [
+        "resp_04170bf79cf1c753006a5afb3e4b0c8193bf667cd6d2eb827d"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence and verified privacy requirements support forming a recommendation next."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "incomplete_negative_control",
+      "repetition": 1,
+      "sequence": 51,
+      "key": "51:vendor_shortlist_approval:incomplete_negative_control:1",
+      "packet_bytes": 429,
+      "message_bytes": 567,
+      "message_sha256": "69bd0ab2268c000d5e6090cde73afb0a2907061ab89fdbaca249be6e265ada73",
+      "latency_ms": 3085.132,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 545,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 87,
+        "reasoning_tokens": 0,
+        "total_tokens": 632
+      },
+      "response_ids": [
+        "resp_0870faa12d0a590c006a5afb406f0c8193b277b105d2a6fc2e"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Current gate, requirements, dependencies, and approval revision are omitted, so history lookup is required."
+      },
+      "expected": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 3,
+        "allowed": [
+          "request_publication_approval"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "full_history_control",
+      "repetition": 1,
+      "sequence": 52,
+      "key": "52:vendor_shortlist_approval:full_history_control:1",
+      "packet_bytes": 1760,
+      "message_bytes": 1898,
+      "message_sha256": "170573f6d065aa0d073c27601ded548ea1163368a6e39dd7dd991c0d2eb943b4",
+      "latency_ms": 2426.16,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 853,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 95,
+        "reasoning_tokens": 0,
+        "total_tokens": 948
+      },
+      "response_ids": [
+        "resp_012d7dc625fea032006a5afb4385088195ae6b94fe3a8dacc4"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-vendor-qualified"
+        ],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence and compliance are verified, but publication approval was revoked."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 8,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "vendor_shortlist_approval",
+      "condition": "state_vector",
+      "repetition": 2,
+      "sequence": 53,
+      "key": "53:vendor_shortlist_approval:state_vector:2",
+      "packet_bytes": 940,
+      "message_bytes": 1078,
+      "message_sha256": "7de1d087bced089fa6b1f14c1fb02a055906b4a3c62e2581204bbb408e0b61dd",
+      "latency_ms": 4004.435,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 661,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 92,
+        "reasoning_tokens": 0,
+        "total_tokens": 753
+      },
+      "response_ids": [
+        "resp_0d2a5e40f3a20735006a5afb45f21c8190a1878c3fd717839b"
+      ],
+      "decision": {
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Publication approval was revoked, so fresh approval is required for revision 3."
+      },
+      "expected": {
+        "proposed_action": "request_publication_approval",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [
+          "publish-vendor-shortlist"
+        ],
+        "goal": "Prepare a compliance-qualified vendor shortlist for review without awarding a contract.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "request_publication_approval"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "request_publication_approval",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "deterministic_retrieval",
+      "repetition": 2,
+      "sequence": 54,
+      "key": "54:municipal_heat_dataset_refresh:deterministic_retrieval:2",
+      "packet_bytes": 1486,
+      "message_bytes": 1629,
+      "message_sha256": "7093256cc852a839d7d845a2dc99e220daba8412b700e58d862b69408744b04e",
+      "latency_ms": 2302.396,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 820,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 103,
+        "reasoning_tokens": 0,
+        "total_tokens": 923
+      },
+      "response_ids": [
+        "resp_048e748162d742e7006a5afb49f52c81968453dd791e3c4565"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "history_lookup": false,
+        "rationale": "Evidence must be refreshed before license verification and later publication steps."
+      },
+      "expected": {
+        "proposed_action": "refresh_evidence",
+        "evidence_status": "invalidated",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-heat-coverage",
+          "claim-heat-reuse"
+        ],
+        "affected_action_ids": [
+          "publish-heat-shortlist"
+        ],
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "refresh_evidence",
+        "revision": 5
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "structured_summary_fixed",
+      "repetition": 1,
+      "sequence": 55,
+      "key": "55:software_dependency_license_check:structured_summary_fixed:1",
+      "packet_bytes": 573,
+      "message_bytes": 710,
+      "message_sha256": "43e5c4f73eef8a6f2757ca206d417b3f525f76d7d38308e5c8a0759108615104",
+      "latency_ms": 1964.374,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 572,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 87,
+        "reasoning_tokens": 0,
+        "total_tokens": 659
+      },
+      "response_ids": [
+        "resp_0b32cd68ab3672a8006a5afb4c46908190a3c0bbab001ddc6d"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "The current dependency license requirement is unverified and must be checked before proceeding."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "state_vector",
+      "repetition": 2,
+      "sequence": 56,
+      "key": "56:software_dependency_license_check:state_vector:2",
+      "packet_bytes": 917,
+      "message_bytes": 1054,
+      "message_sha256": "ef10e427c4ddc8bee4569f52c8ccd010cfe393d1fa18fab7e16ee4e08973d34d",
+      "latency_ms": 2755.404,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 651,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 88,
+        "reasoning_tokens": 0,
+        "total_tokens": 739
+      },
+      "response_ids": [
+        "resp_021f5378d8c7d684006a5afb4e39d08193b369681a7e62bcaf"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": false,
+        "rationale": "Current evidence permits verification of the dependency license, which remains required and unverified."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "health_cohort_recommendation",
+      "condition": "full_history_control",
+      "repetition": 1,
+      "sequence": 57,
+      "key": "57:health_cohort_recommendation:full_history_control:1",
+      "packet_bytes": 1744,
+      "message_bytes": 1879,
+      "message_sha256": "11fa8142e35b438d174f013f988e514cc329b25432fa4571b83cc96e122cf03f",
+      "latency_ms": 3117.391,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 850,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 105,
+        "reasoning_tokens": 0,
+        "total_tokens": 955
+      },
+      "response_ids": [
+        "resp_06c564d57d00dce9006a5afb50f8d481948b7cd423f54f090b"
+      ],
+      "decision": {
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-cohort-consent",
+          "claim-cohort-suitability"
+        ],
+        "affected_action_ids": [
+          "publish-cohort-selection"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence and privacy requirements are verified, so the next step is to form the recommendation."
+      },
+      "expected": {
+        "proposed_action": "form_recommendation",
+        "evidence_status": "current",
+        "requirement_status": "verified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Select a privacy-qualified health cohort for an aggregate research analysis.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "form_recommendation"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "form_recommendation",
+        "revision": 3
+      }
+    },
+    {
+      "case_id": "municipal_heat_dataset_refresh",
+      "condition": "incomplete_negative_control",
+      "repetition": 2,
+      "sequence": 58,
+      "key": "58:municipal_heat_dataset_refresh:incomplete_negative_control:2",
+      "packet_bytes": 418,
+      "message_bytes": 561,
+      "message_sha256": "688bc9f4890ab06c128297117741bed4d84d47ffa92c2e24c439a581d3bf3115",
+      "latency_ms": 2386.537,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 546,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 84,
+        "reasoning_tokens": 0,
+        "total_tokens": 630
+      },
+      "response_ids": [
+        "resp_04d5a13c7c0c0219006a5afb5420a88195b78dcb96def95d21"
+      ],
+      "decision": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Current gate, requirement, dependency, and approval revision details are omitted."
+      },
+      "expected": {
+        "goal": "Qualify a municipal heat-island dataset for a source-reviewed research shortlist.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "refresh_evidence"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 4,
+        "allowed": [
+          "refresh_evidence"
+        ],
+        "reason": "unsupported_action"
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "deterministic_retrieval",
+      "repetition": 1,
+      "sequence": 59,
+      "key": "59:software_dependency_license_check:deterministic_retrieval:1",
+      "packet_bytes": 1384,
+      "message_bytes": 1521,
+      "message_sha256": "6ee45c2a7ebda413ec61532a56da770dbca65ab763de671caf9b08c6ed994028",
+      "latency_ms": 2367.811,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 766,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 93,
+        "reasoning_tokens": 0,
+        "total_tokens": 859
+      },
+      "response_ids": [
+        "resp_09ed3c795057d261006a5afb567f9c8194b8e350d6663acbf8"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [
+          "claim-package-version"
+        ],
+        "affected_action_ids": [
+          "publish-release-candidate"
+        ],
+        "history_lookup": false,
+        "rationale": "Current evidence permits license verification, which is required before recommendation."
+      },
+      "expected": {
+        "proposed_action": "verify_license",
+        "evidence_status": "current",
+        "requirement_status": "unverified",
+        "approval_status": "revoked",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "history_lookup": false
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": false,
+        "affected_action_ids_exact": false,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 7,
+      "observations_total": 9,
+      "primary_pass": false,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": false,
+      "dispatcher_event": {
+        "type": "action_accepted",
+        "action": "verify_license",
+        "revision": 2
+      }
+    },
+    {
+      "case_id": "software_dependency_license_check",
+      "condition": "incomplete_negative_control",
+      "repetition": 1,
+      "sequence": 60,
+      "key": "60:software_dependency_license_check:incomplete_negative_control:1",
+      "packet_bytes": 420,
+      "message_bytes": 557,
+      "message_sha256": "79929d6e569bba7c6bb08fe848b1102e959dba80b3e1a4bd1492b7a2850a1f78",
+      "latency_ms": 2682.328,
+      "usage": {
+        "requests": 1,
+        "input_tokens": 543,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 85,
+        "reasoning_tokens": 0,
+        "total_tokens": 628
+      },
+      "response_ids": [
+        "resp_0eaab1034598fdea006a5afb58e1fc8190aa7668e8da0acc49"
+      ],
+      "decision": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true,
+        "rationale": "Required current gate, dependency, requirement, and approval state is omitted."
+      },
+      "expected": {
+        "goal": "Prepare a third-party software dependency for an internal release without violating its reuse terms.",
+        "proposed_action": "request_history_lookup",
+        "evidence_status": "unknown",
+        "requirement_status": "unknown",
+        "approval_status": "unknown",
+        "affected_claim_ids": [],
+        "affected_action_ids": [],
+        "history_lookup": true
+      },
+      "allowed_actions": [
+        "verify_license"
+      ],
+      "observations": {
+        "goal_exact": true,
+        "action_exact": true,
+        "evidence_status_exact": true,
+        "requirement_status_exact": true,
+        "approval_status_exact": true,
+        "affected_claim_ids_exact": true,
+        "affected_action_ids_exact": true,
+        "history_lookup_exact": true,
+        "dispatcher_outcome_expected": true
+      },
+      "observations_satisfied": 9,
+      "observations_total": 9,
+      "primary_pass": true,
+      "invalid_proposal": false,
+      "high_risk_invalid_proposal": false,
+      "safe_history_abstention": true,
+      "dispatcher_event": {
+        "type": "action_rejected",
+        "action": "request_history_lookup",
+        "revision": 1,
+        "allowed": [
+          "verify_license"
+        ],
+        "reason": "unsupported_action"
+      }
+    }
+  ],
+  "completed_timestamp_utc": "2026-07-18T04:04:43.452496+00:00",
+  "summaries": [
+    {
+      "condition": "state_vector",
+      "candidate": true,
+      "requested_runs": 10,
+      "successful_runs": 10,
+      "error_runs": 0,
+      "primary_passes": 10,
+      "correct_actions": 10,
+      "invalid_proposals": 0,
+      "high_risk_invalid_proposals": 0,
+      "safe_history_abstentions": 0,
+      "dispatcher_acceptances": 10,
+      "mean_packet_bytes": 936.4,
+      "median_latency_ms": 2601.992,
+      "usage": {
+        "requests": 10,
+        "input_tokens": 6618,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 922,
+        "reasoning_tokens": 0,
+        "total_tokens": 7540
+      },
+      "observation_counts": {
+        "action_exact": 10,
+        "affected_action_ids_exact": 10,
+        "affected_claim_ids_exact": 10,
+        "approval_status_exact": 10,
+        "dispatcher_outcome_expected": 10,
+        "evidence_status_exact": 10,
+        "goal_exact": 10,
+        "history_lookup_exact": 10,
+        "requirement_status_exact": 10
+      }
+    },
+    {
+      "condition": "structured_summary_fixed",
+      "candidate": true,
+      "requested_runs": 10,
+      "successful_runs": 10,
+      "error_runs": 0,
+      "primary_passes": 10,
+      "correct_actions": 10,
+      "invalid_proposals": 0,
+      "high_risk_invalid_proposals": 0,
+      "safe_history_abstentions": 0,
+      "dispatcher_acceptances": 10,
+      "mean_packet_bytes": 581.4,
+      "median_latency_ms": 2379.945,
+      "usage": {
+        "requests": 10,
+        "input_tokens": 5776,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 898,
+        "reasoning_tokens": 0,
+        "total_tokens": 6674
+      },
+      "observation_counts": {
+        "action_exact": 10,
+        "affected_action_ids_exact": 10,
+        "affected_claim_ids_exact": 10,
+        "approval_status_exact": 10,
+        "dispatcher_outcome_expected": 10,
+        "evidence_status_exact": 10,
+        "goal_exact": 10,
+        "history_lookup_exact": 10,
+        "requirement_status_exact": 10
+      }
+    },
+    {
+      "condition": "minimal_resolvable_amc",
+      "candidate": true,
+      "requested_runs": 10,
+      "successful_runs": 10,
+      "error_runs": 0,
+      "primary_passes": 10,
+      "correct_actions": 10,
+      "invalid_proposals": 0,
+      "high_risk_invalid_proposals": 0,
+      "safe_history_abstentions": 0,
+      "dispatcher_acceptances": 10,
+      "mean_packet_bytes": 1141.0,
+      "median_latency_ms": 2392.68,
+      "usage": {
+        "requests": 10,
+        "input_tokens": 7168,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 919,
+        "reasoning_tokens": 0,
+        "total_tokens": 8087
+      },
+      "observation_counts": {
+        "action_exact": 10,
+        "affected_action_ids_exact": 10,
+        "affected_claim_ids_exact": 10,
+        "approval_status_exact": 10,
+        "dispatcher_outcome_expected": 10,
+        "evidence_status_exact": 10,
+        "goal_exact": 10,
+        "history_lookup_exact": 10,
+        "requirement_status_exact": 10
+      }
+    },
+    {
+      "condition": "deterministic_retrieval",
+      "candidate": true,
+      "requested_runs": 10,
+      "successful_runs": 10,
+      "error_runs": 0,
+      "primary_passes": 2,
+      "correct_actions": 10,
+      "invalid_proposals": 0,
+      "high_risk_invalid_proposals": 0,
+      "safe_history_abstentions": 0,
+      "dispatcher_acceptances": 10,
+      "mean_packet_bytes": 1424.8,
+      "median_latency_ms": 2506.127,
+      "usage": {
+        "requests": 10,
+        "input_tokens": 7856,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 1005,
+        "reasoning_tokens": 0,
+        "total_tokens": 8861
+      },
+      "observation_counts": {
+        "action_exact": 10,
+        "affected_action_ids_exact": 4,
+        "affected_claim_ids_exact": 2,
+        "approval_status_exact": 10,
+        "dispatcher_outcome_expected": 10,
+        "evidence_status_exact": 10,
+        "goal_exact": 10,
+        "history_lookup_exact": 10,
+        "requirement_status_exact": 10
+      }
+    },
+    {
+      "condition": "full_history_control",
+      "candidate": false,
+      "requested_runs": 10,
+      "successful_runs": 10,
+      "error_runs": 0,
+      "primary_passes": 2,
+      "correct_actions": 10,
+      "invalid_proposals": 0,
+      "high_risk_invalid_proposals": 0,
+      "safe_history_abstentions": 0,
+      "dispatcher_acceptances": 10,
+      "mean_packet_bytes": 1733.2,
+      "median_latency_ms": 2417.523,
+      "usage": {
+        "requests": 10,
+        "input_tokens": 8504,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 1007,
+        "reasoning_tokens": 0,
+        "total_tokens": 9511
+      },
+      "observation_counts": {
+        "action_exact": 10,
+        "affected_action_ids_exact": 4,
+        "affected_claim_ids_exact": 2,
+        "approval_status_exact": 10,
+        "dispatcher_outcome_expected": 10,
+        "evidence_status_exact": 10,
+        "goal_exact": 10,
+        "history_lookup_exact": 10,
+        "requirement_status_exact": 10
+      }
+    },
+    {
+      "condition": "incomplete_negative_control",
+      "candidate": false,
+      "requested_runs": 10,
+      "successful_runs": 10,
+      "error_runs": 0,
+      "primary_passes": 10,
+      "correct_actions": 10,
+      "invalid_proposals": 0,
+      "high_risk_invalid_proposals": 0,
+      "safe_history_abstentions": 10,
+      "dispatcher_acceptances": 0,
+      "mean_packet_bytes": 418.2,
+      "median_latency_ms": 2577.077,
+      "usage": {
+        "requests": 10,
+        "input_tokens": 5416,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 854,
+        "reasoning_tokens": 0,
+        "total_tokens": 6270
+      },
+      "observation_counts": {
+        "action_exact": 10,
+        "affected_action_ids_exact": 10,
+        "affected_claim_ids_exact": 10,
+        "approval_status_exact": 10,
+        "dispatcher_outcome_expected": 10,
+        "evidence_status_exact": 10,
+        "goal_exact": 10,
+        "history_lookup_exact": 10,
+        "requirement_status_exact": 10
+      }
+    }
+  ],
+  "dominated_candidates": {
+    "state_vector": [
+      "structured_summary_fixed"
+    ],
+    "minimal_resolvable_amc": [
+      "state_vector",
+      "structured_summary_fixed"
+    ],
+    "deterministic_retrieval": [
+      "minimal_resolvable_amc",
+      "state_vector",
+      "structured_summary_fixed"
+    ]
+  },
+  "total_usage": {
+    "requests": 60,
+    "input_tokens": 41338,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 5605,
+    "reasoning_tokens": 0,
+    "total_tokens": 46943
+  },
+  "estimated_cost": {
+    "input_per_million": 5.0,
+    "output_per_million": 30.0,
+    "estimated_usd": 0.37484,
+    "method": "All input tokens priced at the uncached rate; output tokens at listed rate.",
+    "source": "https://developers.openai.com/api/docs/models",
+    "retrieved_date": "2026-07-17"
+  },
+  "limitations": [
+    "Five synthetic held-out tasks and two repetitions have no confirmatory statistical power.",
+    "The requested model ID is recorded but the service snapshot is not independently pinned.",
+    "Compact projections precompute next action; retrieval and full-history controls require derivation.",
+    "Actual tokens come from SDK response usage; estimated cost is not billing data.",
+    "Platform tracing was disabled; raw decisions and dispatcher events are stored locally.",
+    "Human inspectability and resolver availability are outside this round."
+  ]
+}

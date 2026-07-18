@@ -1,0 +1,16 @@
+{
+  "case_id": "public_dataset_gate_ordering_001",
+  "question": "You are resuming this research after the supplied events. Determine the single action executable now and the required action order through publication. State whether recommendation, requesting new publication approval, and publication are allowed now. Use only the handoff; do not skip prerequisites. Return the required JSON decision.",
+  "events": [
+    {
+      "type": "evidence_invalidated",
+      "evidence_id": "evidence-001",
+      "effect": "Candidate A claims require recheck."
+    },
+    {
+      "type": "approval_revoked",
+      "action_id": "publish-shortlist"
+    }
+  ],
+  "repetitions": 3
+}

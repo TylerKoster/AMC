@@ -1,0 +1,10 @@
+results/latest.json
+results/event_compression_latest.json
+results/event_compression_compact_latest.json
+results/id_only_dependencies_latest.json
+results/id_only_dependencies_v2_latest.json
+results/gate_ordering_latest.json
+results/failure_space_latest.json
+results/failure_space_regraded_latest.json
+__pycache__/
+*.egg-info/

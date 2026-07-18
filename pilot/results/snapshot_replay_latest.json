@@ -1,0 +1,18 @@
+{
+  "run_type": "local_snapshot_replay_benchmark",
+  "event_count": 1000,
+  "checkpoint_sequence": 900,
+  "tail_event_count": 100,
+  "repetitions": 30,
+  "full_replay_median_ms": 15.296,
+  "checkpoint_tail_replay_median_ms": 1.848,
+  "observed_speed_ratio": 8.279,
+  "full_event_stream_bytes": 892574,
+  "checkpoint_bytes": 74532,
+  "tail_event_bytes": 89356,
+  "checkpoint_plus_tail_working_bytes": 163888,
+  "working_byte_reduction_percent": 81.639,
+  "canonical_full_log_still_required": true,
+  "final_revision": 1000,
+  "states_equal": true
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "public_dataset_id_only_dependency_002",
+  "question": "You are resuming this research after terse system events. Use only the supplied handoff. Exact equality between identifiers in supplied structured fields is an explicit mapping; do not infer any other relationship from identifier wording. If no evidence-to-claim mapping is present, return no affected claim IDs, mark the dependency unresolved, and request a history lookup. Return the required JSON decision.",
+  "events": [
+    {
+      "type": "evidence_invalidated",
+      "evidence_id": "evidence-001",
+      "event_id": "event-002"
+    },
+    {
+      "type": "approval_revoked",
+      "action_id": "publish-shortlist",
+      "event_id": "event-003"
+    }
+  ],
+  "repetitions": 3
+}

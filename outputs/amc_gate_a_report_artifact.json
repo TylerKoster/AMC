@@ -1,0 +1,495 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Agent Memory Capsule — Gate A Prior-Art Review",
+    "description": "A protocolized rapid scoping review of whether the proposed Agent Memory Capsule has a defensible research gap.",
+    "generatedAt": "2026-07-17T00:00:00-05:00",
+    "sources": [
+      {
+        "id": "evidence-matrix",
+        "label": "Gate A evidence matrix",
+        "path": "outputs/amc_gate_a_evidence_matrix.csv"
+      },
+      {
+        "id": "claim-ledger",
+        "label": "Gate A append-only claim ledger",
+        "path": "outputs/amc_gate_a_claim_ledger.csv"
+      },
+      {
+        "id": "search-log",
+        "label": "Gate A exact-query search log",
+        "path": "outputs/amc_gate_a_search_log.csv"
+      },
+      {
+        "id": "research-protocol",
+        "label": "AMC research protocol v0.1",
+        "path": "outputs/agent_memory_capsule_research_protocol_v0.1.md"
+      }
+    ],
+    "charts": [
+      {
+        "id": "evidence-class-counts",
+        "title": "Included sources by evidence class",
+        "subtitle": "The review deliberately separates empirical research from specifications and product documentation.",
+        "type": "bar",
+        "intent": "comparison",
+        "question": "What kinds of evidence support the provisional Gate A decision?",
+        "rationale": "A bar chart makes the composition of the bounded evidence set auditable without implying that source counts measure truth.",
+        "dataset": "evidence_classes",
+        "source": {
+          "id": "evidence-class-query",
+          "label": "Evidence-class aggregation from the Gate A matrix",
+          "path": "outputs/amc_gate_a_evidence_matrix.csv",
+          "query": {
+            "engine": "SQLite",
+            "language": "sql",
+            "executed_at": "2026-07-17T00:00:00-05:00",
+            "description": "Returns the reviewed source count for each evidence class. Counts were cross-checked against the 28-row evidence matrix.",
+            "sql": "SELECT evidence_class, source_count FROM (SELECT 'Peer-reviewed primary research' AS evidence_class, 8 AS source_count UNION ALL SELECT 'Primary preprints', 9 UNION ALL SELECT 'Standards and official guidance', 9 UNION ALL SELECT 'Official product/community docs', 2) ORDER BY source_count DESC, evidence_class",
+            "tables_used": [
+              "outputs/amc_gate_a_evidence_matrix.csv"
+            ],
+            "filters": [
+              "Included source IDs S001-S028",
+              "Retrieved on 2026-07-17"
+            ],
+            "metric_definitions": [
+              "source_count = number of retained, deduplicated sources assigned to the mutually exclusive evidence_class in the Gate A evidence matrix"
+            ]
+          }
+        },
+        "encodings": {
+          "x": {
+            "field": "evidence_class",
+            "type": "nominal",
+            "label": "Evidence class"
+          },
+          "y": {
+            "field": "source_count",
+            "type": "quantitative",
+            "label": "Included sources"
+          }
+        },
+        "xAxisTitle": "Evidence class",
+        "yAxisTitle": "Included sources",
+        "valueFormat": "number",
+        "layout": "full",
+        "maxRows": 10,
+        "surface": {
+          "legend": {
+            "visible": false
+          },
+          "labels": {
+            "values": "all"
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "prior-art-overlap",
+        "title": "Proposed AMC components already overlap substantial prior art",
+        "subtitle": "“Not found” means not demonstrated in this bounded review, not proof of global absence.",
+        "dataset": "overlap_matrix",
+        "source": {
+          "id": "overlap-query",
+          "label": "Reviewed prior-art overlap synthesis",
+          "path": "outputs/amc_gate_a_report_artifact.json",
+          "query": {
+            "engine": "SQLite",
+            "language": "sql",
+            "executed_at": "2026-07-17T00:00:00-05:00",
+            "description": "Selects the manually coded component-to-prior-art synthesis from the validated report snapshot; supporting source records are in the evidence matrix.",
+            "sql": "SELECT component, strongest_precedent, overlap, implication FROM overlap_matrix ORDER BY component ASC",
+            "tables_used": [
+              "overlap_matrix",
+              "outputs/amc_gate_a_evidence_matrix.csv"
+            ],
+            "filters": [
+              "Only components proposed in AMC spec v0.2",
+              "Only precedents retained in Gate A evidence matrix S001-S028"
+            ],
+            "metric_definitions": [
+              "overlap is a qualitative reviewer code: High, Partial, or Unresolved; it is not a measured probability"
+            ]
+          }
+        },
+        "defaultSort": {
+          "field": "component",
+          "direction": "asc"
+        },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "component",
+            "label": "AMC component",
+            "type": "text"
+          },
+          {
+            "field": "strongest_precedent",
+            "label": "Strongest reviewed precedent",
+            "type": "text"
+          },
+          {
+            "field": "overlap",
+            "label": "Overlap",
+            "type": "text"
+          },
+          {
+            "field": "implication",
+            "label": "Research implication",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "key-claims",
+        "title": "Claims controlling the next research decision",
+        "subtitle": "The complete append-only ledger preserves supporting and limiting evidence, status, and review dates.",
+        "dataset": "key_claims",
+        "source": {
+          "id": "claim-query",
+          "label": "Decision-controlling claims",
+          "path": "outputs/amc_gate_a_report_artifact.json",
+          "query": {
+            "engine": "SQLite",
+            "language": "sql",
+            "executed_at": "2026-07-17T00:00:00-05:00",
+            "description": "Selects the report subset of decision-controlling claims; the complete append-only evidence fields remain in the claim-ledger CSV.",
+            "sql": "SELECT claim_id, claim, evidence_status, confidence, decision FROM key_claims ORDER BY claim_id ASC",
+            "tables_used": [
+              "key_claims",
+              "outputs/amc_gate_a_claim_ledger.csv"
+            ],
+            "filters": [
+              "Claims selected because they directly control Gate A or Gate B decisions"
+            ],
+            "metric_definitions": [
+              "confidence is a qualitative evidence assessment, not a calibrated probability"
+            ]
+          }
+        },
+        "defaultSort": {
+          "field": "claim_id",
+          "direction": "asc"
+        },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "claim_id",
+            "label": "ID",
+            "type": "text"
+          },
+          {
+            "field": "claim",
+            "label": "Claim",
+            "type": "text"
+          },
+          {
+            "field": "evidence_status",
+            "label": "Evidence status",
+            "type": "text"
+          },
+          {
+            "field": "confidence",
+            "label": "Confidence",
+            "type": "text"
+          },
+          {
+            "field": "decision",
+            "label": "Decision effect",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "id": "report-title",
+        "type": "markdown",
+        "layout": "full",
+        "body": "# Agent Memory Capsule — Gate A Prior-Art Review\n\nProtocolized rapid scoping review · 17 July 2026"
+      },
+      {
+        "id": "technical-summary",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "evidence-matrix",
+        "body": "## Gate A passes only conditionally—and the thesis must narrow\n\nThe reviewed evidence rejects a broad novelty claim. Agent memory, hierarchical paging, runtime checkpoints, file-based trajectory retrieval, agent messages and artifacts, portable research crates, provenance graphs, structural schemas, and canonical hashing all predate AMC. The bounded review includes 28 primary or official sources: 8 peer-reviewed research publications, 9 primary preprints, 9 standards or official guidance documents, and 2 official product/community documentation sources.\n\nA plausible research gap remains, but it is narrower: a model-neutral **preservation contract plus evaluator** that jointly tests required answers, negative decisions, action parameters, approvals, stop conditions, duplicate-action prevention, evidence links, contradictions, and human inspection after resumption. That combination was not demonstrated in the reviewed set. This is a search-bounded evidence gap, not a novelty finding."
+      },
+      {
+        "id": "evidence-composition-heading",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Evidence quality is mixed, so source counts cannot be treated as votes\n\nPeer-reviewed benchmark evidence supports the importance of temporal memory, selective forgetting, and action grounding. The newest file-based and security results are preprints. Specifications prove that mechanisms exist; they do not prove that those mechanisms preserve task state correctly or improve outcomes."
+      },
+      {
+        "id": "evidence-composition-chart",
+        "type": "chart",
+        "chartId": "evidence-class-counts",
+        "layout": "full"
+      },
+      {
+        "id": "overlap-heading",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Most of the proposed object is integration, not invention\n\nThe correct design move is reuse: PROV-O for provenance concepts, RO-Crate for packaging where appropriate, JSON Schema for structure, RFC 8785 for deterministic canonicalization, OpenTelemetry-style traces for the audit source, and A2A/MCP only as possible transports or integrations. AMC should remain a derived semantic projection from an immutable trajectory, not the authoritative execution log."
+      },
+      {
+        "id": "overlap-table-block",
+        "type": "table",
+        "tableId": "prior-art-overlap",
+        "layout": "full"
+      },
+      {
+        "id": "claims-heading",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## The next phase must try to falsify the preservation construct\n\nThe key risk is that the proposed contract is costly annotation wrapped around ordinary structured summarization. A second risk is that compression creates false confidence by hiding missing, stale, or poisoned evidence. The ledger therefore preserves negative and limiting evidence rather than collapsing it into a single supportive narrative."
+      },
+      {
+        "id": "claims-table-block",
+        "type": "table",
+        "tableId": "key-claims",
+        "layout": "full"
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "search-log",
+        "body": "## This is a protocolized rapid scoping review, not a completed systematic review\n\nTen search batches containing 40 exact web queries were run on 17 July 2026. Primary papers, proceedings, formal standards, official specifications, and official technical documentation were prioritized. Vendor-authored studies were retained but labeled. The search interface did not expose total hit counts, so a valid PRISMA identification total cannot yet be reported. Screening was performed by one reviewer and source snapshots/hashes remain pending.\n\nThe next literature step is a database-complete search in ACL Anthology, OpenReview, ACM Digital Library, IEEE Xplore, Crossref/OpenAlex, and arXiv, followed by deduplication and independent double-screening of a prespecified sample."
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Uncertainty is concentrated in the only potentially novel claim\n\nThe assertion that no existing format jointly validates the full AMC preservation contract has only medium-low confidence. Terminology is fragmented, recent 2026 work is moving quickly, and this review may have missed domain-specific workflow or safety formats. Several central security results are days or weeks old and unreproduced. No human-factors evidence was found that directly validates the proposed intention card.\n\nTherefore this report does **not** establish novelty, efficacy, portability, safety, or market value."
+      },
+      {
+        "id": "next-steps",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "research-protocol",
+        "body": "## Proceed to Gate B planning, but keep product implementation paused\n\n1. Complete the database search and second-reviewer screening before making a novelty statement.\n2. Reproduce one open benchmark baseline—preferably LongMemEval-V2/AgentRunbook-C plus an action-oriented subset from Mem2ActBench or MemoryArena.\n3. Draft the preservation-contract annotation rubric independently of the capsule schema.\n4. Measure curator agreement before building a compiler. Low agreement invalidates the construct.\n5. Reconstruct a persistent-memory poisoning suite before any external-write capability is considered.\n\nA schema prototype is justified only after the external harness reproduces a published baseline within a preregistered tolerance."
+      },
+      {
+        "id": "further-questions",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Questions still capable of killing the project\n\n- Can two independent curators agree on what must survive compression?\n- Does the contract add value over a well-designed structured summary plus file retrieval?\n- Are negative decisions and authorization boundaries stable after repeated updates?\n- Does evidence retrieval erase the claimed token savings?\n- Can a different model resume correctly without compiler-specific prompts or latent state?\n- Does the human projection improve correct understanding, or merely confidence?"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-17T00:00:00-05:00",
+    "status": "ready",
+    "datasets": {
+      "evidence_classes": [
+        {
+          "evidence_class": "Peer-reviewed primary research",
+          "source_count": 8
+        },
+        {
+          "evidence_class": "Primary preprints",
+          "source_count": 9
+        },
+        {
+          "evidence_class": "Standards and official guidance",
+          "source_count": 9
+        },
+        {
+          "evidence_class": "Official product/community docs",
+          "source_count": 2
+        }
+      ],
+      "overlap_matrix": [
+        {
+          "component": "General agent memory",
+          "strongest_precedent": "CoALA; Generative Agents; MemGPT",
+          "overlap": "High",
+          "implication": "Reject any claim that AMC invents agent memory."
+        },
+        {
+          "component": "Hierarchical or paged memory",
+          "strongest_precedent": "MemGPT; Mem0; Zep",
+          "overlap": "High",
+          "implication": "Treat compression and retrieval as baseline engineering, not novelty."
+        },
+        {
+          "component": "Runtime state and replay",
+          "strongest_precedent": "LangGraph checkpoints",
+          "overlap": "High",
+          "implication": "Keep exact checkpoints separate from semantic transfer objects."
+        },
+        {
+          "component": "File-based trajectory memory",
+          "strongest_precedent": "LongMemEval-V2 AgentRunbook-C",
+          "overlap": "High",
+          "implication": "Use it as a required baseline."
+        },
+        {
+          "component": "Portable packaging",
+          "strongest_precedent": "RO-Crate; Workflow Run RO-Crate",
+          "overlap": "High",
+          "implication": "Profile or reuse an existing crate instead of inventing a container."
+        },
+        {
+          "component": "Provenance model",
+          "strongest_precedent": "W3C PROV-O; OpenTelemetry traces",
+          "overlap": "High",
+          "implication": "Map to existing entity/activity/agent/plan and trace concepts."
+        },
+        {
+          "component": "Agent messages and artifacts",
+          "strongest_precedent": "A2A; MCP",
+          "overlap": "High",
+          "implication": "Use as transport/integration layers only."
+        },
+        {
+          "component": "Structural validation and integrity",
+          "strongest_precedent": "JSON Schema; RFC 8785",
+          "overlap": "High",
+          "implication": "Reuse for syntax and hashes; do not confuse integrity with truth."
+        },
+        {
+          "component": "Decision and negative-decision ledger",
+          "strongest_precedent": "Partial analogues in agent traces and runbooks",
+          "overlap": "Partial",
+          "implication": "Define and search more precisely before claiming a gap."
+        },
+        {
+          "component": "Executable preservation tests",
+          "strongest_precedent": "Memory benchmarks test related constructs",
+          "overlap": "Partial",
+          "implication": "Potential contribution is a per-capsule contract, if curator agreement is adequate."
+        },
+        {
+          "component": "Human intention card",
+          "strongest_precedent": "General explainability guidance",
+          "overlap": "Unresolved",
+          "implication": "Requires a blinded comprehension study; confidence is not correctness."
+        },
+        {
+          "component": "Authorization and duplicate-action preservation",
+          "strongest_precedent": "Workflow/runtime safety patterns; action-memory benchmarks",
+          "overlap": "Partial",
+          "implication": "Evaluate as a safety outcome, not a format claim."
+        }
+      ],
+      "key_claims": [
+        {
+          "claim_id": "C001",
+          "claim": "Agent memory is established prior art.",
+          "evidence_status": "Supported",
+          "confidence": "High",
+          "decision": "Reject broad novelty."
+        },
+        {
+          "claim_id": "C002",
+          "claim": "Runtime checkpoints already preserve exact graph state and replay.",
+          "evidence_status": "Mechanism documented",
+          "confidence": "High",
+          "decision": "Separate checkpoint from capsule."
+        },
+        {
+          "claim_id": "C003",
+          "claim": "A2A and MCP already cover major interaction primitives.",
+          "evidence_status": "Specification-backed",
+          "confidence": "High",
+          "decision": "Use as integrations, not novelty."
+        },
+        {
+          "claim_id": "C004",
+          "claim": "Portable research objects and provenance standards already exist.",
+          "evidence_status": "Standards and peer-reviewed support",
+          "confidence": "High",
+          "decision": "Reuse RO-Crate and PROV concepts."
+        },
+        {
+          "claim_id": "C005",
+          "claim": "File-based agent memory is direct prior art.",
+          "evidence_status": "Recent preprint",
+          "confidence": "Medium",
+          "decision": "Reproduce AgentRunbook-C."
+        },
+        {
+          "claim_id": "C006",
+          "claim": "Recall alone does not establish safe memory-guided action.",
+          "evidence_status": "Benchmark-supported inference",
+          "confidence": "Medium-high",
+          "decision": "Use action outcomes."
+        },
+        {
+          "claim_id": "C008",
+          "claim": "Persistent memory is a cross-session attack surface.",
+          "evidence_status": "Three recent preprints",
+          "confidence": "Medium-high",
+          "decision": "Require poisoning tests."
+        },
+        {
+          "claim_id": "C011",
+          "claim": "The proposed intention card has no direct validated analogue in the bounded review.",
+          "evidence_status": "Evidence gap",
+          "confidence": "Medium",
+          "decision": "Run human study."
+        },
+        {
+          "claim_id": "C012",
+          "claim": "The joint preservation contract was not demonstrated in the reviewed set.",
+          "evidence_status": "Search-bounded gap",
+          "confidence": "Medium-low",
+          "decision": "Expand review before novelty claim."
+        },
+        {
+          "claim_id": "C013",
+          "claim": "The likely contribution is a construct and evaluator, not a new file or tokenizer.",
+          "evidence_status": "Provisional synthesis",
+          "confidence": "Medium",
+          "decision": "Narrow thesis."
+        },
+        {
+          "claim_id": "C014",
+          "claim": "AMC efficacy, portability, safety, and novelty are unproven.",
+          "evidence_status": "Current research status",
+          "confidence": "High",
+          "decision": "No product claims."
+        },
+        {
+          "claim_id": "C015",
+          "claim": "Gate A may proceed conditionally.",
+          "evidence_status": "Protocol decision",
+          "confidence": "Medium",
+          "decision": "Plan Gate B; pause implementation."
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "evidence-matrix",
+      "label": "Gate A evidence matrix",
+      "path": "outputs/amc_gate_a_evidence_matrix.csv"
+    },
+    {
+      "id": "claim-ledger",
+      "label": "Gate A append-only claim ledger",
+      "path": "outputs/amc_gate_a_claim_ledger.csv"
+    },
+    {
+      "id": "search-log",
+      "label": "Gate A exact-query search log",
+      "path": "outputs/amc_gate_a_search_log.csv"
+    },
+    {
+      "id": "research-protocol",
+      "label": "AMC research protocol v0.1",
+      "path": "outputs/agent_memory_capsule_research_protocol_v0.1.md"
+    }
+  ]
+}

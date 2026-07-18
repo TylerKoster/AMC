@@ -1,0 +1,17 @@
+{
+  "case_id": "public_dataset_id_only_dependency_001",
+  "question": "You are resuming this research after terse system events. Use only the supplied handoff. Do not infer relationships from identifier names. If the handoff lacks the mapping between an event and affected claims or actions, mark that dependency unresolved and request a history lookup. Return the required JSON decision.",
+  "events": [
+    {
+      "type": "evidence_invalidated",
+      "evidence_id": "evidence-001",
+      "event_id": "event-002"
+    },
+    {
+      "type": "approval_revoked",
+      "action_id": "publish-shortlist",
+      "event_id": "event-003"
+    }
+  ],
+  "repetitions": 3
+}
