@@ -1,0 +1,23 @@
+{
+  "schema_version": "amc-round-c-live-protocol/0.1",
+  "experiment_id": "amc-round-c-paid-comparison-v1",
+  "status": "preregistered-not-run",
+  "input_partition_sha256": "1e262a41d61a089190cd4b1814880dc687699ecb97ea958b35421b052f8a1414",
+  "capture_sha256": "dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa",
+  "conditions": [
+    "structured_summary_v2",
+    "minimal_amc_v2",
+    "full_input_control"
+  ],
+  "repetitions": 2,
+  "random_seed": 13013,
+  "planned_calls": 60,
+  "model": "gpt-5.6-sol",
+  "max_turns": 1,
+  "instruction_version": "round-c-preservation/0.1",
+  "output_schema_version": "round-c-decision/0.1",
+  "condition_label_in_model_input": false,
+  "tools_enabled": false,
+  "web_access_enabled": false,
+  "tracing_disabled": true
+}

@@ -76,3 +76,29 @@ python .\pilot\round_c_preflight.py
 ```
 
 Its fixtures are synthetic and establish only that the evaluation packets and graders obey their declared contract. They are not Round C model-performance evidence.
+
+## Round C source-backed corpus
+
+`round_c_real_trajectories.py` collected and froze ten fresh external-source retrieval trajectories across eight official portal/API families. Exact response hashes and normalized observations are stored without response bodies. Model inputs and preservation oracles are physically separate.
+
+The committed v1 corpus is frozen. To audit a new retrieval without overwriting it, write all four artifacts under the ignored `work/` directory:
+
+```powershell
+python .\pilot\round_c_real_trajectories.py `
+  --capture-out .\work\round_c_capture_audit.json `
+  --inputs-out .\work\round_c_inputs_audit.json `
+  --oracles-out .\work\round_c_oracles_audit.json `
+  --report-out .\work\round_c_report_audit.md
+```
+
+This corpus grounds future tasks; it does not contain or evaluate natural model behavior.
+
+## Round C live-runner gate
+
+Experiment 013 separates input-only packet construction, paid execution, and post-persistence grading. The no-model gate uses the frozen ten-task input partition, produces a seeded balanced 60-call schedule, verifies exact packet recoverability, and loads no held-out contracts.
+
+```powershell
+python .\pilot\live_eval\round_c_packet_audit.py
+```
+
+Passing that audit is necessary but does not authorize paid execution or establish any model-performance result.
