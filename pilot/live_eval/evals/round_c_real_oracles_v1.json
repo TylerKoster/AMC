@@ -1,0 +1,541 @@
+{
+  "schema_version": "amc-round-c-preservation-oracles/0.1",
+  "corpus_id": "amc-round-c-real-trajectories-v1",
+  "capture_sha256": "dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa",
+  "status": "held-out-frozen-preservation-contracts",
+  "contracts": [
+    {
+      "case_id": "chicago_permits_terms",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "chicago-permits-metadata",
+            "response_sha256": "ac9610a391e43de567374cebee3d5a56e232845b5012a66a8ef4fa221da0fc2b",
+            "key": "dataset_id",
+            "value": "ydr8-5enu"
+          },
+          {
+            "source_id": "chicago-permits-metadata",
+            "response_sha256": "ac9610a391e43de567374cebee3d5a56e232845b5012a66a8ef4fa221da0fc2b",
+            "key": "name",
+            "value": "Building Permits"
+          },
+          {
+            "source_id": "chicago-permits-metadata",
+            "response_sha256": "ac9610a391e43de567374cebee3d5a56e232845b5012a66a8ef4fa221da0fc2b",
+            "key": "license_id",
+            "value": "SEE_TERMS_OF_USE"
+          },
+          {
+            "source_id": "chicago-permits-metadata",
+            "response_sha256": "ac9610a391e43de567374cebee3d5a56e232845b5012a66a8ef4fa221da0fc2b",
+            "key": "rows_updated_at",
+            "value": 1784290928
+          },
+          {
+            "source_id": "chicago-permits-metadata",
+            "response_sha256": "ac9610a391e43de567374cebee3d5a56e232845b5012a66a8ef4fa221da0fc2b",
+            "key": "column_count",
+            "value": 122
+          }
+        ],
+        "required_source_ids": [
+          "chicago-permits-metadata"
+        ],
+        "required_actions": [
+          "verify_dataset_terms_before_reuse",
+          "bind_any_count_to_the_captured_snapshot"
+        ],
+        "forbidden_actions": [
+          "treat_publication_as_reuse_permission",
+          "claim_the_live_dataset_is_static"
+        ],
+        "decision_rule": "A public listing does not by itself establish reusable licensing; preserve the dataset-specific license field and retrieval snapshot.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/chicago_permits_terms"
+      }
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "nyc-311-metadata",
+            "response_sha256": "682cdbadbed2585a5aa8d3c0f6988517644dd0e3209a645b37aa3beb3a86d2d5",
+            "key": "dataset_id",
+            "value": "erm2-nwe9"
+          },
+          {
+            "source_id": "nyc-311-metadata",
+            "response_sha256": "682cdbadbed2585a5aa8d3c0f6988517644dd0e3209a645b37aa3beb3a86d2d5",
+            "key": "name",
+            "value": "311 Service Requests from 2020 to Present"
+          },
+          {
+            "source_id": "nyc-311-metadata",
+            "response_sha256": "682cdbadbed2585a5aa8d3c0f6988517644dd0e3209a645b37aa3beb3a86d2d5",
+            "key": "rows_updated_at",
+            "value": 1784338598
+          },
+          {
+            "source_id": "nyc-311-metadata",
+            "response_sha256": "682cdbadbed2585a5aa8d3c0f6988517644dd0e3209a645b37aa3beb3a86d2d5",
+            "key": "column_count",
+            "value": 48
+          },
+          {
+            "source_id": "nyc-311-metadata",
+            "response_sha256": "682cdbadbed2585a5aa8d3c0f6988517644dd0e3209a645b37aa3beb3a86d2d5",
+            "key": "field_names_sha256",
+            "value": "f43437b7834335220efc102f59dadd53722a9892ff983df1ae7e509586ec6b3c"
+          }
+        ],
+        "required_source_ids": [
+          "nyc-311-metadata",
+          "nyc-311-update-notice"
+        ],
+        "required_actions": [
+          "validate_api_field_names_against_current_metadata",
+          "preserve_the_publisher_update_notice_reference"
+        ],
+        "forbidden_actions": [
+          "infer_api_names_from_display_labels",
+          "merge_historical_and_current_datasets_without_schema_validation"
+        ],
+        "decision_rule": "Schema conclusions must remain bound to the current metadata and the publisher's change notice.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/nyc_311_schema_change"
+      }
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "cdc-ari-metadata",
+            "response_sha256": "4fb06af84bbc7cecf1de29443a71a713dc8fe445ae5f9283e264d3a10d767f4e",
+            "key": "dataset_id",
+            "value": "f3zz-zga5"
+          },
+          {
+            "source_id": "cdc-ari-metadata",
+            "response_sha256": "4fb06af84bbc7cecf1de29443a71a713dc8fe445ae5f9283e264d3a10d767f4e",
+            "key": "name",
+            "value": "Level of Acute Respiratory Illness (ARI) Activity by State"
+          },
+          {
+            "source_id": "cdc-ari-metadata",
+            "response_sha256": "4fb06af84bbc7cecf1de29443a71a713dc8fe445ae5f9283e264d3a10d767f4e",
+            "key": "rows_updated_at",
+            "value": 1784304102
+          },
+          {
+            "source_id": "cdc-ari-metadata",
+            "response_sha256": "4fb06af84bbc7cecf1de29443a71a713dc8fe445ae5f9283e264d3a10d767f4e",
+            "key": "view_last_modified",
+            "value": 1784304101
+          },
+          {
+            "source_id": "cdc-ari-metadata",
+            "response_sha256": "4fb06af84bbc7cecf1de29443a71a713dc8fe445ae5f9283e264d3a10d767f4e",
+            "key": "column_count",
+            "value": 4
+          }
+        ],
+        "required_source_ids": [
+          "cdc-ari-metadata"
+        ],
+        "required_actions": [
+          "bind_health_claims_to_the_retrieval_time",
+          "recheck_metadata_before_future_use"
+        ],
+        "forbidden_actions": [
+          "present_a_live_surveillance_snapshot_as_timeless",
+          "silently_reuse_an_old_snapshot"
+        ],
+        "decision_rule": "Preserve publisher timestamps so later agents can distinguish the captured snapshot from current surveillance data.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/cdc_ari_weekly_snapshot"
+      }
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "census-acs5-discovery",
+            "response_sha256": "6c49a963e2e3c06ab172b1424814b1c6b32388b9819dac18dd3a1a732aca31f4",
+            "key": "vintage",
+            "value": 2024
+          },
+          {
+            "source_id": "census-acs5-discovery",
+            "response_sha256": "6c49a963e2e3c06ab172b1424814b1c6b32388b9819dac18dd3a1a732aca31f4",
+            "key": "dataset_path",
+            "value": "acs/acs5"
+          },
+          {
+            "source_id": "census-acs5-discovery",
+            "response_sha256": "6c49a963e2e3c06ab172b1424814b1c6b32388b9819dac18dd3a1a732aca31f4",
+            "key": "title",
+            "value": "ACS 5-Year Detailed Tables"
+          },
+          {
+            "source_id": "census-acs5-discovery",
+            "response_sha256": "6c49a963e2e3c06ab172b1424814b1c6b32388b9819dac18dd3a1a732aca31f4",
+            "key": "variables_link",
+            "value": "http://api.census.gov/data/2024/acs/acs5/variables.json"
+          },
+          {
+            "source_id": "census-acs5-discovery",
+            "response_sha256": "6c49a963e2e3c06ab172b1424814b1c6b32388b9819dac18dd3a1a732aca31f4",
+            "key": "geography_link",
+            "value": "http://api.census.gov/data/2024/acs/acs5/geography.json"
+          }
+        ],
+        "required_source_ids": [
+          "census-acs5-discovery",
+          "census-api-guide"
+        ],
+        "required_actions": [
+          "inspect_current_variable_definitions",
+          "preserve_vintage_and_dataset_path"
+        ],
+        "forbidden_actions": [
+          "select_variables_from_memory",
+          "describe_aggregate_tables_as_person_level_records"
+        ],
+        "decision_rule": "Variable and geography choices must remain tied to the exact dataset vintage and discovery metadata.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/census_acs_dataset_selection"
+      }
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "world-bank-population-indicator",
+            "response_sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+            "key": "indicator_id",
+            "value": "SP.POP.TOTL"
+          },
+          {
+            "source_id": "world-bank-population-indicator",
+            "response_sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+            "key": "name",
+            "value": "Population, total"
+          },
+          {
+            "source_id": "world-bank-population-indicator",
+            "response_sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+            "key": "source_id",
+            "value": "2"
+          },
+          {
+            "source_id": "world-bank-population-indicator",
+            "response_sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+            "key": "source_name",
+            "value": "World Development Indicators"
+          },
+          {
+            "source_id": "world-bank-population-indicator",
+            "response_sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+            "key": "source_note_sha256",
+            "value": "4fe03e44bcc46484cd1abdeeccad601445994dcb4accd3626eea18992eaf698b"
+          }
+        ],
+        "required_source_ids": [
+          "world-bank-population-indicator",
+          "world-bank-api-docs"
+        ],
+        "required_actions": [
+          "preserve_the_exact_indicator_code",
+          "retain_the_source_definition_fingerprint"
+        ],
+        "forbidden_actions": [
+          "substitute_a_similarly_named_indicator",
+          "drop_the_indicator_source_identity"
+        ],
+        "decision_rule": "A human-readable label is insufficient identity; preserve the indicator code and definition fingerprint.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/world_bank_indicator_identity"
+      }
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "eurostat-demo-pjan-slice",
+            "response_sha256": "213b4e100206341ec88201680f14d1619af5dcc03cb9b8319cf08ed6a63862b1",
+            "key": "dataset_label",
+            "value": "Population on 1 January by age and sex"
+          },
+          {
+            "source_id": "eurostat-demo-pjan-slice",
+            "response_sha256": "213b4e100206341ec88201680f14d1619af5dcc03cb9b8319cf08ed6a63862b1",
+            "key": "dimension_ids",
+            "value": [
+              "freq",
+              "unit",
+              "age",
+              "sex",
+              "geo",
+              "time"
+            ]
+          },
+          {
+            "source_id": "eurostat-demo-pjan-slice",
+            "response_sha256": "213b4e100206341ec88201680f14d1619af5dcc03cb9b8319cf08ed6a63862b1",
+            "key": "dimension_sizes",
+            "value": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "source_id": "eurostat-demo-pjan-slice",
+            "response_sha256": "213b4e100206341ec88201680f14d1619af5dcc03cb9b8319cf08ed6a63862b1",
+            "key": "updated",
+            "value": "2026-07-09T11:00:00+0200"
+          },
+          {
+            "source_id": "eurostat-demo-pjan-slice",
+            "response_sha256": "213b4e100206341ec88201680f14d1619af5dcc03cb9b8319cf08ed6a63862b1",
+            "key": "value_count",
+            "value": 1
+          }
+        ],
+        "required_source_ids": [
+          "eurostat-demo-pjan-slice",
+          "eurostat-api-guide"
+        ],
+        "required_actions": [
+          "preserve_all_dimension_filters",
+          "bind_values_to_the_dataset_update_marker"
+        ],
+        "forbidden_actions": [
+          "drop_age_or_sex_dimensions",
+          "generalize_the_slice_beyond_its_dimensions"
+        ],
+        "decision_rule": "The value is not interpretable without dataset identity, time, geography, age, and sex dimensions.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/eurostat_population_slice"
+      }
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "nasa-power-chicago-t2m",
+            "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+            "key": "parameter",
+            "value": "T2M"
+          },
+          {
+            "source_id": "nasa-power-chicago-t2m",
+            "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+            "key": "units",
+            "value": "C"
+          },
+          {
+            "source_id": "nasa-power-chicago-t2m",
+            "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+            "key": "coordinates",
+            "value": [
+              -87.63,
+              41.878,
+              180.72
+            ]
+          },
+          {
+            "source_id": "nasa-power-chicago-t2m",
+            "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+            "key": "start",
+            "value": "20260101"
+          },
+          {
+            "source_id": "nasa-power-chicago-t2m",
+            "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+            "key": "end",
+            "value": "20260103"
+          },
+          {
+            "source_id": "nasa-power-chicago-t2m",
+            "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+            "key": "values_sha256",
+            "value": "4fc4b8ef6928e16cbd598e8a36d1f5ae319cdf08011d6c50578549b54cc14c27"
+          }
+        ],
+        "required_source_ids": [
+          "nasa-power-chicago-t2m",
+          "nasa-power-daily-docs"
+        ],
+        "required_actions": [
+          "label_the_values_as_a_captured_api_response",
+          "schedule_retrieval_if_final_quality_is_required"
+        ],
+        "forbidden_actions": [
+          "claim_the_values_can_never_be_revised",
+          "drop_coordinates_or_date_range"
+        ],
+        "decision_rule": "Preserve space, time, parameter, units, and response fingerprint; do not imply permanence.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/nasa_power_near_real_time"
+      }
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "usgs-all-day-feed",
+            "response_sha256": "6e7e1bf74a9397365024ff520162bd12a022bd97966b50512bf5b95cd3b4597b",
+            "key": "title",
+            "value": "USGS All Earthquakes, Past Day"
+          },
+          {
+            "source_id": "usgs-all-day-feed",
+            "response_sha256": "6e7e1bf74a9397365024ff520162bd12a022bd97966b50512bf5b95cd3b4597b",
+            "key": "generated",
+            "value": 1784354391000
+          },
+          {
+            "source_id": "usgs-all-day-feed",
+            "response_sha256": "6e7e1bf74a9397365024ff520162bd12a022bd97966b50512bf5b95cd3b4597b",
+            "key": "metadata_count",
+            "value": 288
+          },
+          {
+            "source_id": "usgs-all-day-feed",
+            "response_sha256": "6e7e1bf74a9397365024ff520162bd12a022bd97966b50512bf5b95cd3b4597b",
+            "key": "feature_count",
+            "value": 288
+          },
+          {
+            "source_id": "usgs-all-day-feed",
+            "response_sha256": "6e7e1bf74a9397365024ff520162bd12a022bd97966b50512bf5b95cd3b4597b",
+            "key": "api_version",
+            "value": "2.7.0"
+          }
+        ],
+        "required_source_ids": [
+          "usgs-all-day-feed",
+          "usgs-feed-docs"
+        ],
+        "required_actions": [
+          "attach_the_feed_generated_time_to_any_count",
+          "refresh_before_claiming_current_status"
+        ],
+        "forbidden_actions": [
+          "present_the_rolling_count_without_a_time",
+          "treat_the_feed_as_an_immutable_dataset"
+        ],
+        "decision_rule": "A rolling-feed count is valid only for its captured response and generated timestamp.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/usgs_earthquake_live_feed"
+      }
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "dataverse-ethiopia-version",
+            "response_sha256": "9f2353a06a88997cdb1b987fc5135f43c97a23714e28ee4aede776eb9c7a55de",
+            "key": "persistent_id",
+            "value": "doi:10.7910/DVN/LG8QLB"
+          },
+          {
+            "source_id": "dataverse-ethiopia-version",
+            "response_sha256": "9f2353a06a88997cdb1b987fc5135f43c97a23714e28ee4aede776eb9c7a55de",
+            "key": "title",
+            "value": "Ethiopia Nile Basin Climate Change Adaptation Dataset"
+          },
+          {
+            "source_id": "dataverse-ethiopia-version",
+            "response_sha256": "9f2353a06a88997cdb1b987fc5135f43c97a23714e28ee4aede776eb9c7a55de",
+            "key": "version",
+            "value": "4.2"
+          },
+          {
+            "source_id": "dataverse-ethiopia-version",
+            "response_sha256": "9f2353a06a88997cdb1b987fc5135f43c97a23714e28ee4aede776eb9c7a55de",
+            "key": "version_state",
+            "value": "RELEASED"
+          },
+          {
+            "source_id": "dataverse-ethiopia-version",
+            "response_sha256": "9f2353a06a88997cdb1b987fc5135f43c97a23714e28ee4aede776eb9c7a55de",
+            "key": "terms_of_use_sha256",
+            "value": "c76243e955f7f986d20ccd35f6bc5ea89c1c7c00ca063fc05c98a299c287c38d"
+          }
+        ],
+        "required_source_ids": [
+          "dataverse-ethiopia-version",
+          "dataverse-native-api-docs"
+        ],
+        "required_actions": [
+          "preserve_record_specific_license_metadata",
+          "cite_the_exact_persistent_identifier_and_version"
+        ],
+        "forbidden_actions": [
+          "replace_record_terms_with_repository_defaults",
+          "drop_the_dataset_version"
+        ],
+        "decision_rule": "Record-level identifier, version, and terms-of-use fingerprint control the handoff.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/dataverse_record_specific_terms"
+      }
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "preservation_contract": {
+        "required_facts": [
+          {
+            "source_id": "zenodo-fsd50k-record",
+            "response_sha256": "1c418b2293f2fabd6f564be4abbba2c97fb41007b30d93efa4341a4f59a88f29",
+            "key": "record_id",
+            "value": 4060432
+          },
+          {
+            "source_id": "zenodo-fsd50k-record",
+            "response_sha256": "1c418b2293f2fabd6f564be4abbba2c97fb41007b30d93efa4341a4f59a88f29",
+            "key": "title",
+            "value": "FSD50K"
+          },
+          {
+            "source_id": "zenodo-fsd50k-record",
+            "response_sha256": "1c418b2293f2fabd6f564be4abbba2c97fb41007b30d93efa4341a4f59a88f29",
+            "key": "record_license",
+            "value": "other-at"
+          },
+          {
+            "source_id": "zenodo-fsd50k-record",
+            "response_sha256": "1c418b2293f2fabd6f564be4abbba2c97fb41007b30d93efa4341a4f59a88f29",
+            "key": "file_count",
+            "value": 11
+          },
+          {
+            "source_id": "zenodo-fsd50k-record",
+            "response_sha256": "1c418b2293f2fabd6f564be4abbba2c97fb41007b30d93efa4341a4f59a88f29",
+            "key": "file_checksums_sha256",
+            "value": "a5caa68137bd91bceec2914b60af6c9638a3a0d740863fdb20e4e244957e65cc"
+          }
+        ],
+        "required_source_ids": [
+          "zenodo-fsd50k-record",
+          "zenodo-api-docs"
+        ],
+        "required_actions": [
+          "preserve_record_and_file_identity",
+          "review_component_license_information_before_reuse"
+        ],
+        "forbidden_actions": [
+          "assume_one_record_label_resolves_all_component_rights",
+          "drop_file_checksums"
+        ],
+        "decision_rule": "Preserve the record license field and file fingerprints without claiming they settle all component rights.",
+        "resolver_ref": "capture://dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa/zenodo_component_license_complexity"
+      }
+    }
+  ],
+  "partition_sha256": "afff35b9b2d91f66788f0d0aa152cfb6e460c406dc093e7b39d7f642de5b36ba"
+}

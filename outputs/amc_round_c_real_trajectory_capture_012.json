@@ -1,0 +1,497 @@
+{
+  "schema_version": "amc-round-c-source-capture/0.1",
+  "corpus_id": "amc-round-c-real-trajectories-v1",
+  "collected_at": "2026-07-18T06:00:18.749935Z",
+  "model_calls": 0,
+  "response_bodies_stored": false,
+  "manifest_sha256": "2caa6fe0f7d8a46ddc9dced89e042a64eebf014e6e87e7a5226776e7a992b753",
+  "cases": [
+    {
+      "case_id": "chicago_permits_terms",
+      "publisher": "City of Chicago",
+      "portal_family": "Socrata",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "chicago-permits-metadata",
+          "role": "primary",
+          "requested_url": "https://data.cityofchicago.org/api/views/ydr8-5enu",
+          "final_url": "https://data.cityofchicago.org/api/views/ydr8-5enu",
+          "parser": "socrata",
+          "started_at": "2026-07-18T06:00:09.327761Z",
+          "completed_at": "2026-07-18T06:00:10.065824Z",
+          "elapsed_ms": 735.358,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 214044,
+          "response_sha256": "ac9610a391e43de567374cebee3d5a56e232845b5012a66a8ef4fa221da0fc2b",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "dataset_id": "ydr8-5enu",
+            "name": "Building Permits",
+            "attribution": "City of Chicago",
+            "license_id": "SEE_TERMS_OF_USE",
+            "publication_stage": "published",
+            "rows_updated_at": 1784290928,
+            "view_last_modified": 1780080970,
+            "column_count": 122,
+            "field_names_sha256": "e6b8619602ad8f4b09888329f4536555aaf8b084fac453c7a254655e81b6658c"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "publisher": "City of New York",
+      "portal_family": "Socrata",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "nyc-311-metadata",
+          "role": "primary",
+          "requested_url": "https://data.cityofnewyork.us/api/views/erm2-nwe9",
+          "final_url": "https://data.cityofnewyork.us/api/views/erm2-nwe9",
+          "parser": "socrata",
+          "started_at": "2026-07-18T06:00:10.066131Z",
+          "completed_at": "2026-07-18T06:00:10.547667Z",
+          "elapsed_ms": 481.324,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 25591,
+          "response_sha256": "682cdbadbed2585a5aa8d3c0f6988517644dd0e3209a645b37aa3beb3a86d2d5",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "dataset_id": "erm2-nwe9",
+            "name": "311 Service Requests from 2020 to Present",
+            "attribution": "311",
+            "license_id": null,
+            "publication_stage": "published",
+            "rows_updated_at": 1784338598,
+            "view_last_modified": 1767021900,
+            "column_count": 48,
+            "field_names_sha256": "f43437b7834335220efc102f59dadd53722a9892ff983df1ae7e509586ec6b3c"
+          }
+        },
+        {
+          "source_id": "nyc-311-update-notice",
+          "role": "publisher_notice",
+          "requested_url": "https://opendata.cityofnewyork.us/311-service-requests-from-2010-to-present-updates/",
+          "final_url": "https://opendata.cityofnewyork.us/311-service-requests-from-2010-to-present-updates/",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:10.547768Z",
+          "completed_at": "2026-07-18T06:00:10.799874Z",
+          "elapsed_ms": 252.085,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 41988,
+          "response_sha256": "3fa1bb96ba63f84e4e5b232fdec0fe8be36eaf0ac66a6466acfc8e49e8def306",
+          "etag": null,
+          "last_modified": null,
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "publisher": "Centers for Disease Control and Prevention",
+      "portal_family": "Socrata",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "cdc-ari-metadata",
+          "role": "primary",
+          "requested_url": "https://data.cdc.gov/api/views/f3zz-zga5",
+          "final_url": "https://data.cdc.gov/api/views/f3zz-zga5",
+          "parser": "socrata",
+          "started_at": "2026-07-18T06:00:10.800016Z",
+          "completed_at": "2026-07-18T06:00:11.179379Z",
+          "elapsed_ms": 379.233,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 7161,
+          "response_sha256": "4fb06af84bbc7cecf1de29443a71a713dc8fe445ae5f9283e264d3a10d767f4e",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "dataset_id": "f3zz-zga5",
+            "name": "Level of Acute Respiratory Illness (ARI) Activity by State",
+            "attribution": null,
+            "license_id": null,
+            "publication_stage": "published",
+            "rows_updated_at": 1784304102,
+            "view_last_modified": 1784304101,
+            "column_count": 4,
+            "field_names_sha256": "1fc3785e82b04b041f2693c0e3ad6a9d4b9d65eee5ce9d69f9aaab3461ed83f5"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "publisher": "United States Census Bureau",
+      "portal_family": "Census Data API",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "census-acs5-discovery",
+          "role": "primary",
+          "requested_url": "https://api.census.gov/data/2024/acs/acs5.json",
+          "final_url": "https://api.census.gov/data/2024/acs/acs5.json",
+          "parser": "census_discovery",
+          "started_at": "2026-07-18T06:00:11.179478Z",
+          "completed_at": "2026-07-18T06:00:11.424005Z",
+          "elapsed_ms": 244.392,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 18905,
+          "response_sha256": "6c49a963e2e3c06ab172b1424814b1c6b32388b9819dac18dd3a1a732aca31f4",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "vintage": 2024,
+            "dataset_path": "acs/acs5",
+            "title": "ACS 5-Year Detailed Tables",
+            "variables_link": "http://api.census.gov/data/2024/acs/acs5/variables.json",
+            "geography_link": "http://api.census.gov/data/2024/acs/acs5/geography.json",
+            "description_sha256": "8b4dc6f3d2afd9f7ee3121d606a1e0d2f3189b233d87d219a6c25369b5997e73"
+          }
+        },
+        {
+          "source_id": "census-api-guide",
+          "role": "publisher_documentation",
+          "requested_url": "https://www.census.gov/data/developers/guidance/api-user-guide.Available_Data.html",
+          "final_url": "https://www.census.gov/data/developers/guidance/api-user-guide.Available_Data.html",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:11.424120Z",
+          "completed_at": "2026-07-18T06:00:11.696192Z",
+          "elapsed_ms": 272.047,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 298233,
+          "response_sha256": "6798232eb2a5b82a906befba2e4096f83155d73ac182a95c93cc34f41f19ba87",
+          "etag": null,
+          "last_modified": null,
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "publisher": "World Bank",
+      "portal_family": "World Bank Indicators API",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "world-bank-population-indicator",
+          "role": "primary",
+          "requested_url": "https://api.worldbank.org/v2/indicator/SP.POP.TOTL?format=json",
+          "final_url": "https://api.worldbank.org/v2/indicator/SP.POP.TOTL?format=json",
+          "parser": "world_bank_indicator",
+          "started_at": "2026-07-18T06:00:11.696545Z",
+          "completed_at": "2026-07-18T06:00:11.816117Z",
+          "elapsed_ms": 119.507,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 1099,
+          "response_sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+          "etag": null,
+          "last_modified": "Thu, 16 Jul 2026 20:50:36 GMT",
+          "observations": {
+            "indicator_id": "SP.POP.TOTL",
+            "name": "Population, total",
+            "source_id": "2",
+            "source_name": "World Development Indicators",
+            "source_note_sha256": "4fe03e44bcc46484cd1abdeeccad601445994dcb4accd3626eea18992eaf698b"
+          }
+        },
+        {
+          "source_id": "world-bank-api-docs",
+          "role": "publisher_documentation",
+          "requested_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+          "final_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:11.816206Z",
+          "completed_at": "2026-07-18T06:00:12.217449Z",
+          "elapsed_ms": 401.213,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 224333,
+          "response_sha256": "6d295f9e56da2e95dde5403c49a45ac2a9962d58112b4048ef3342765b0d99ad",
+          "etag": "W/\"d38c2a5045e5c2d9386fde589bb3fb45\"",
+          "last_modified": null,
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "publisher": "Eurostat",
+      "portal_family": "Eurostat Statistics API",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "eurostat-demo-pjan-slice",
+          "role": "primary",
+          "requested_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?lang=en&geo=DE&sex=T&age=TOTAL&sinceTimePeriod=2024&untilTimePeriod=2024",
+          "final_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?lang=en&geo=DE&sex=T&age=TOTAL&sinceTimePeriod=2024&untilTimePeriod=2024",
+          "parser": "eurostat",
+          "started_at": "2026-07-18T06:00:12.217758Z",
+          "completed_at": "2026-07-18T06:00:12.610915Z",
+          "elapsed_ms": 392.92,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 2598,
+          "response_sha256": "213b4e100206341ec88201680f14d1619af5dcc03cb9b8319cf08ed6a63862b1",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "dataset_label": "Population on 1 January by age and sex",
+            "dimension_ids": [
+              "freq",
+              "unit",
+              "age",
+              "sex",
+              "geo",
+              "time"
+            ],
+            "dimension_sizes": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "updated": "2026-07-09T11:00:00+0200",
+            "version": "2.0",
+            "value_count": 1,
+            "values_sha256": "416dd5a0ab036f01b8ca2a0980af844ac95622e60054b1e8cc0bb29d724e42aa"
+          }
+        },
+        {
+          "source_id": "eurostat-api-guide",
+          "role": "publisher_documentation",
+          "requested_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started",
+          "final_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:12.611076Z",
+          "completed_at": "2026-07-18T06:00:13.362359Z",
+          "elapsed_ms": 751.242,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 201220,
+          "response_sha256": "fa615e6a5c8421dfe37065da7b16ea028f46dd33a79e3f3f6c4136e6005599a9",
+          "etag": null,
+          "last_modified": null,
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "publisher": "NASA Langley Research Center",
+      "portal_family": "NASA POWER API",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "nasa-power-chicago-t2m",
+          "role": "primary",
+          "requested_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M&community=SB&longitude=-87.6298&latitude=41.8781&start=20260101&end=20260103&format=JSON",
+          "final_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M&community=SB&longitude=-87.6298&latitude=41.8781&start=20260101&end=20260103&format=JSON",
+          "parser": "nasa_power",
+          "started_at": "2026-07-18T06:00:13.362626Z",
+          "completed_at": "2026-07-18T06:00:13.852491Z",
+          "elapsed_ms": 489.757,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 514,
+          "response_sha256": "0be94d8b360554e59eb6ce866f19e68f114ac765fb0a77550c05cb6db884fe1a",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "parameter": "T2M",
+            "units": "C",
+            "coordinates": [
+              -87.63,
+              41.878,
+              180.72
+            ],
+            "start": "20260101",
+            "end": "20260103",
+            "api_version": null,
+            "values_sha256": "4fc4b8ef6928e16cbd598e8a36d1f5ae319cdf08011d6c50578549b54cc14c27",
+            "value_count": 3
+          }
+        },
+        {
+          "source_id": "nasa-power-daily-docs",
+          "role": "publisher_documentation",
+          "requested_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+          "final_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:13.852581Z",
+          "completed_at": "2026-07-18T06:00:13.964092Z",
+          "elapsed_ms": 111.49,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 34207,
+          "response_sha256": "e2c8553c91af20b62a326fdd732e62ade027f114258c51b740844a44537c3f52",
+          "etag": "\"a75de047495e99d63a930e4128e0c814\"",
+          "last_modified": "Thu, 09 Jul 2026 20:42:54 GMT",
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "publisher": "United States Geological Survey",
+      "portal_family": "USGS GeoJSON Feed",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "usgs-all-day-feed",
+          "role": "primary",
+          "requested_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+          "final_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+          "parser": "usgs_geojson",
+          "started_at": "2026-07-18T06:00:13.964230Z",
+          "completed_at": "2026-07-18T06:00:14.196984Z",
+          "elapsed_ms": 228.799,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 205578,
+          "response_sha256": "6e7e1bf74a9397365024ff520162bd12a022bd97966b50512bf5b95cd3b4597b",
+          "etag": null,
+          "last_modified": "Sat, 18 Jul 2026 05:59:51 GMT",
+          "observations": {
+            "title": "USGS All Earthquakes, Past Day",
+            "generated": 1784354391000,
+            "metadata_count": 288,
+            "feature_count": 288,
+            "api_version": "2.7.0",
+            "features_sha256": "c307e705b1442a681eb40dabc4d469896a301bacdb71ad47f3220680000fc8cf"
+          }
+        },
+        {
+          "source_id": "usgs-feed-docs",
+          "role": "publisher_documentation",
+          "requested_url": "https://earthquake.usgs.gov/earthquakes/feed/",
+          "final_url": "https://earthquake.usgs.gov/earthquakes/feed/",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:14.197191Z",
+          "completed_at": "2026-07-18T06:00:14.288412Z",
+          "elapsed_ms": 91.198,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 11141,
+          "response_sha256": "0eef57bd350766bb491dc01f9912232fb5886ec57e80fec738ab5ecfa686e57c",
+          "etag": null,
+          "last_modified": null,
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "publisher": "Harvard Dataverse",
+      "portal_family": "Dataverse Native API",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "dataverse-ethiopia-version",
+          "role": "primary",
+          "requested_url": "https://dataverse.harvard.edu/api/datasets/:persistentId/versions/:latest?persistentId=doi%3A10.7910%2FDVN%2FLG8QLB",
+          "final_url": "https://dataverse.harvard.edu/api/datasets/:persistentId/versions/:latest?persistentId=doi%3A10.7910%2FDVN%2FLG8QLB",
+          "parser": "dataverse_version",
+          "started_at": "2026-07-18T06:00:14.288542Z",
+          "completed_at": "2026-07-18T06:00:15.737834Z",
+          "elapsed_ms": 1447.849,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 98250,
+          "response_sha256": "9f2353a06a88997cdb1b987fc5135f43c97a23714e28ee4aede776eb9c7a55de",
+          "etag": null,
+          "last_modified": null,
+          "observations": {
+            "persistent_id": "doi:10.7910/DVN/LG8QLB",
+            "title": "Ethiopia Nile Basin Climate Change Adaptation Dataset",
+            "version": "4.2",
+            "version_state": "RELEASED",
+            "release_time": "2018-06-18T21:08:19Z",
+            "terms_of_use_sha256": "c76243e955f7f986d20ccd35f6bc5ea89c1c7c00ca063fc05c98a299c287c38d",
+            "has_record_terms_of_use": true
+          }
+        },
+        {
+          "source_id": "dataverse-native-api-docs",
+          "role": "publisher_documentation",
+          "requested_url": "https://guides.dataverse.org/en/latest/api/native-api.html",
+          "final_url": "https://guides.dataverse.org/en/latest/api/native-api.html",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:15.738042Z",
+          "completed_at": "2026-07-18T06:00:17.703011Z",
+          "elapsed_ms": 1964.922,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 1107288,
+          "response_sha256": "fd81869241d5afd12e14231d6d1844c24675244abe533d6791b2cf3f185bdf8a",
+          "etag": "\"6a455ebf-10e558\"",
+          "last_modified": "Wed, 01 Jul 2026 18:38:55 GMT",
+          "observations": {}
+        }
+      ]
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "publisher": "Zenodo",
+      "portal_family": "Zenodo REST API",
+      "trajectory_type": "real_external_source_retrieval",
+      "captures": [
+        {
+          "source_id": "zenodo-fsd50k-record",
+          "role": "primary",
+          "requested_url": "https://zenodo.org/api/records/4060432",
+          "final_url": "https://zenodo.org/api/records/4060432",
+          "parser": "zenodo_record",
+          "started_at": "2026-07-18T06:00:17.703684Z",
+          "completed_at": "2026-07-18T06:00:18.614977Z",
+          "elapsed_ms": 910.977,
+          "http_status": 200,
+          "content_type": "application/json",
+          "content_length_bytes": 28815,
+          "response_sha256": "1c418b2293f2fabd6f564be4abbba2c97fb41007b30d93efa4341a4f59a88f29",
+          "etag": "\"12\"",
+          "last_modified": null,
+          "observations": {
+            "record_id": 4060432,
+            "title": "FSD50K",
+            "record_license": "other-at",
+            "updated": "2022-04-24T04:38:57.375654+00:00",
+            "file_count": 11,
+            "file_checksums_sha256": "a5caa68137bd91bceec2914b60af6c9638a3a0d740863fdb20e4e244957e65cc"
+          }
+        },
+        {
+          "source_id": "zenodo-api-docs",
+          "role": "publisher_documentation",
+          "requested_url": "https://developers.zenodo.org/",
+          "final_url": "https://developers.zenodo.org/",
+          "parser": "document",
+          "started_at": "2026-07-18T06:00:18.615129Z",
+          "completed_at": "2026-07-18T06:00:18.749784Z",
+          "elapsed_ms": 134.626,
+          "http_status": 200,
+          "content_type": "text/html",
+          "content_length_bytes": 174410,
+          "response_sha256": "0d160d7491206d3f014549194fa6f18235b1b96e889f57b36356e93acc3476dc",
+          "etag": "\"69d9543d-2a94a\"",
+          "last_modified": "Fri, 10 Apr 2026 19:49:17 GMT",
+          "observations": {}
+        }
+      ]
+    }
+  ],
+  "capture_sha256": "dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa"
+}
