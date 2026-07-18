@@ -92,3 +92,13 @@ python .\pilot\round_c_real_trajectories.py `
 ```
 
 This corpus grounds future tasks; it does not contain or evaluate natural model behavior.
+
+## Round C live-runner gate
+
+Experiment 013 separates input-only packet construction, paid execution, and post-persistence grading. The no-model gate uses the frozen ten-task input partition, produces a seeded balanced 60-call schedule, verifies exact packet recoverability, and loads no held-out contracts.
+
+```powershell
+python .\pilot\live_eval\round_c_packet_audit.py
+```
+
+Passing that audit is necessary but does not authorize paid execution or establish any model-performance result.

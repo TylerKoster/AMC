@@ -1,0 +1,778 @@
+{
+  "schema_version": "amc-round-c-packet-audit/0.1",
+  "experiment": "AMC Round C live gate 013",
+  "status": "complete-no-model-audit",
+  "gate_pass": true,
+  "model_calls": 0,
+  "openai_api_calls": 0,
+  "oracle_files_loaded": 0,
+  "response_bodies_loaded": 0,
+  "input_partition_sha256": "1e262a41d61a089190cd4b1814880dc687699ecb97ea958b35421b052f8a1414",
+  "capture_sha256": "dca3f886d67546d0bf21e0815a80d61a01e0aa8630ea1ee18494637f4ee1eeaa",
+  "protocol_sha256": "45bee1ef196a55f8609aa8b9ac42c2cd9669cb4364141ead6cd7e05eb166eb9e",
+  "random_seed": 13013,
+  "planned_paid_calls": 60,
+  "schedule_sha256": "6170821c096dcb66316950ff4421fa8d9a2b90e6c9be2a669c6b0891217463c1",
+  "schedule": [
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 1
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 2
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 3
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 4
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 5
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 6
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 7
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 8
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 9
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 10
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 11
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 12
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 13
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 14
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 15
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 16
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 17
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 18
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 19
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 20
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 21
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 22
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 23
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 24
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 25
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 26
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 27
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 28
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 29
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 30
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 31
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 32
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 33
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 34
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 35
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 36
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 37
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 38
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 39
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 40
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 41
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 42
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 43
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 44
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 45
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 46
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 47
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 48
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 49
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 50
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 51
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 52
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "structured_summary_v2",
+      "repetition": 2,
+      "sequence": 53
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 54
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 55
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "full_input_control",
+      "repetition": 1,
+      "sequence": 56
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "full_input_control",
+      "repetition": 2,
+      "sequence": 57
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "minimal_amc_v2",
+      "repetition": 2,
+      "sequence": 58
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "structured_summary_v2",
+      "repetition": 1,
+      "sequence": 59
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "minimal_amc_v2",
+      "repetition": 1,
+      "sequence": 60
+    }
+  ],
+  "condition_counts": {
+    "structured_summary_v2": 20,
+    "minimal_amc_v2": 20,
+    "full_input_control": 20
+  },
+  "summaries": {
+    "structured_summary_v2": {
+      "tasks": 10,
+      "semantic_fidelity_passes": 10,
+      "oracle_key_leaks": 0,
+      "condition_label_leaks": 0,
+      "unique_raw_bytes": 18513,
+      "unique_gzip_bytes": 9489
+    },
+    "minimal_amc_v2": {
+      "tasks": 10,
+      "semantic_fidelity_passes": 10,
+      "oracle_key_leaks": 0,
+      "condition_label_leaks": 0,
+      "unique_raw_bytes": 18147,
+      "unique_gzip_bytes": 9434
+    },
+    "full_input_control": {
+      "tasks": 10,
+      "semantic_fidelity_passes": 10,
+      "oracle_key_leaks": 0,
+      "condition_label_leaks": 0,
+      "unique_raw_bytes": 18533,
+      "unique_gzip_bytes": 9504
+    }
+  },
+  "compression_comparison": {
+    "baseline": "structured_summary_v2",
+    "candidate": "minimal_amc_v2",
+    "raw_reduction_percent": 1.977,
+    "gzip_reduction_percent": 0.58,
+    "meaningful_compression_claim": false
+  },
+  "packets": [
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1406,
+        "gzip_bytes": 820,
+        "packet_sha256": "6a5415be807229e69900a2a1eb7925ffc59545a8fce930e8e5b309ef5ec7c2d7"
+      }
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1379,
+        "gzip_bytes": 810,
+        "packet_sha256": "c7c20b64eb27f30cc73f67b3b744bcb1092b939f28845496b4daade055be5eb8"
+      }
+    },
+    {
+      "case_id": "chicago_permits_terms",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1408,
+        "gzip_bytes": 819,
+        "packet_sha256": "b342a3e863ce65381917b79f853175655ba2432cf007188f62c202d0039a64a3"
+      }
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1936,
+        "gzip_bytes": 959,
+        "packet_sha256": "ea6dd5aeafe1f62c00612c2753a51ff3b6409edd24281ac07cb8119d916b24ee"
+      }
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1897,
+        "gzip_bytes": 954,
+        "packet_sha256": "7a754b12cbfa688f92354b2a5c315305951acfa36ddfeaf0ff355aefbdf39a56"
+      }
+    },
+    {
+      "case_id": "nyc_311_schema_change",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1938,
+        "gzip_bytes": 962,
+        "packet_sha256": "31847f8ea0dd298c1d97f527f1521def49bd39ae9fa724ef79f205c39e5a7a98"
+      }
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1424,
+        "gzip_bytes": 852,
+        "packet_sha256": "63d43b9fef1e750a1a77ffcc509b7996bf51a7b2a6b06671aee3b9a5132dc2f5"
+      }
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1397,
+        "gzip_bytes": 841,
+        "packet_sha256": "20b7628e419117000f3f146bd16fa210815dd0cd209ccce4ac430a844209a4de"
+      }
+    },
+    {
+      "case_id": "cdc_ari_weekly_snapshot",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1426,
+        "gzip_bytes": 851,
+        "packet_sha256": "e6382ea83f00466f0f7307c4c1bc6e6da8b8c02349a48d7cdbd20b2ede43e18c"
+      }
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1936,
+        "gzip_bytes": 931,
+        "packet_sha256": "eac1273ff541c585f098ca5b77510c2a200144bbbecd345057b9b1912e7d6c0c"
+      }
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1897,
+        "gzip_bytes": 923,
+        "packet_sha256": "441a1db2df8e0079d518bcfe3746f1b717a3c8ac586c8b815e9375ab37aa0f36"
+      }
+    },
+    {
+      "case_id": "census_acs_dataset_selection",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1938,
+        "gzip_bytes": 930,
+        "packet_sha256": "f5e8d56c0cb0d4613270f127d518f4200ee6dee1763602f06e1774880d489618"
+      }
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1883,
+        "gzip_bytes": 949,
+        "packet_sha256": "34616ae7279d5ffd1e26ada2fba4909a11e6845d9eaad1010cbe92ea126c0e55"
+      }
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1844,
+        "gzip_bytes": 947,
+        "packet_sha256": "8502c227446cae60d665e55a41b7b44e570cfad71f6e3786783a098860d69907"
+      }
+    },
+    {
+      "case_id": "world_bank_indicator_identity",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1885,
+        "gzip_bytes": 955,
+        "packet_sha256": "34e04ba6612a823e341764f7009e46eb724b939d3c8abd910ee43e9c35eedd7f"
+      }
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2132,
+        "gzip_bytes": 1015,
+        "packet_sha256": "6247557f874eccf490fbce3717b2a6e51969dd9e5466bf29e7f442fdd0cdb630"
+      }
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2093,
+        "gzip_bytes": 1011,
+        "packet_sha256": "bc3face06cca2e7991d8454e0cbe64ceb895f1ff2702c1effcb30604fe9bf30a"
+      }
+    },
+    {
+      "case_id": "eurostat_population_slice",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2134,
+        "gzip_bytes": 1015,
+        "packet_sha256": "7b85e59b57c8742c7c33eee4f129a0e61ebebeb401587a51a3046af3de649c7a"
+      }
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2087,
+        "gzip_bytes": 1035,
+        "packet_sha256": "fb109400761cbf9aab9ce567dbd376614bab36d192a221e38ed429a886f92e1a"
+      }
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2048,
+        "gzip_bytes": 1033,
+        "packet_sha256": "ec404627a0412d739ede7ce38184690688b2e88eafff7d9a5999f862eebd764f"
+      }
+    },
+    {
+      "case_id": "nasa_power_near_real_time",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2089,
+        "gzip_bytes": 1042,
+        "packet_sha256": "e6ea6bd4c8310cf488f16b6fbe3f286da91ea924531926f11d1c8765179e78f4"
+      }
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1840,
+        "gzip_bytes": 927,
+        "packet_sha256": "2656b5593c0966dac552ff7853bd21c7d2efb31ce2d8b0bdd89d717129966018"
+      }
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1801,
+        "gzip_bytes": 926,
+        "packet_sha256": "55efda2e5e0e8310e28b011b67af31a440efac18b10d85d16a57393a59b8a4e8"
+      }
+    },
+    {
+      "case_id": "usgs_earthquake_live_feed",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1842,
+        "gzip_bytes": 930,
+        "packet_sha256": "e27bd8a1f350e52bd2372a5aeb0c0ddaeeb575482730a0b084050dafce7435a5"
+      }
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2079,
+        "gzip_bytes": 1050,
+        "packet_sha256": "51ae961f42fb7e2b7600778581446cd60a88f24f92f864f53278ab3a2ed41d01"
+      }
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2040,
+        "gzip_bytes": 1041,
+        "packet_sha256": "86e3da4e6141c07a8d893d6ebdd32c7ce82218539f19d42199b624567ebdb4e3"
+      }
+    },
+    {
+      "case_id": "dataverse_record_specific_terms",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 2081,
+        "gzip_bytes": 1046,
+        "packet_sha256": "abd899a02fff209fec82565c1b092cc915bf4c279ed7e834f5abc8bc0a7f6eeb"
+      }
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "structured_summary_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1790,
+        "gzip_bytes": 951,
+        "packet_sha256": "17dc5d352828852efad33821f3183124ab7a0b9ac584133357df3959e1410b20"
+      }
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "minimal_amc_v2",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1751,
+        "gzip_bytes": 948,
+        "packet_sha256": "299daab9a78f0a6bcd0780eedcd03b34a02d07d8d510769a9f28547827d720d1"
+      }
+    },
+    {
+      "case_id": "zenodo_component_license_complexity",
+      "condition": "full_input_control",
+      "semantic_fidelity": true,
+      "prohibited_keys": [],
+      "condition_label_in_packet": false,
+      "metrics": {
+        "raw_bytes": 1792,
+        "gzip_bytes": 954,
+        "packet_sha256": "164f5ff8d7ead695be1236713089dbea4d7a356c2fc5d307d3866da01ae7d7ca"
+      }
+    }
+  ]
+}
