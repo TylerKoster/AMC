@@ -1,0 +1,357 @@
+{
+  "experiment": "AMC Round C oracle/leakage preflight 011",
+  "status": "synthetic deterministic preflight",
+  "api_calls": 0,
+  "suite_sha256": "ab7a054071ce4336106adbde131121f682a97ce219ad236c3276d04f6e1870e4",
+  "impact_semantics": {
+    "affected": "An entity is affected only when a typed event effect changes one of its canonical fields.",
+    "referenced_only": "Mentioning or targeting an entity without a field transition does not make it affected.",
+    "aggregation": "Task-level affected IDs are the set union of direct event effects; audit order remains event order."
+  },
+  "summary": {
+    "structured_summary_v2": {
+      "contract_passes": 3,
+      "tasks": 4,
+      "total_raw_bytes": 2797,
+      "total_gzip_bytes": 1502,
+      "oracle_leaks": 0
+    },
+    "minimal_amc_v2": {
+      "contract_passes": 4,
+      "tasks": 4,
+      "total_raw_bytes": 5226,
+      "total_gzip_bytes": 2253,
+      "oracle_leaks": 0
+    },
+    "full_history_control": {
+      "contract_passes": 4,
+      "tasks": 4,
+      "total_raw_bytes": 5389,
+      "total_gzip_bytes": 2121,
+      "oracle_leaks": 0
+    }
+  },
+  "mutation_score": {
+    "killed": 6,
+    "total": 6
+  },
+  "mutations": [
+    {
+      "mutant": "drop_dependency_links",
+      "case_id": "dependency_edge_case",
+      "target": "exact_dependency",
+      "killed": true
+    },
+    {
+      "mutant": "drop_current_revision",
+      "case_id": "stale_revision_case",
+      "target": "stale_history_resolution",
+      "killed": true
+    },
+    {
+      "mutant": "activate_negative_decision",
+      "case_id": "negative_decision_case",
+      "target": "negative_decision",
+      "killed": true
+    },
+    {
+      "mutant": "drop_audit_effects",
+      "case_id": "audit_sequence_case",
+      "target": "audit_reconstruction",
+      "killed": true
+    },
+    {
+      "mutant": "reverse_audit_order",
+      "case_id": "audit_sequence_case",
+      "target": "audit_reconstruction",
+      "killed": true
+    },
+    {
+      "mutant": "inject_answer_field",
+      "case_id": "dependency_edge_case",
+      "target": "oracle_free",
+      "killed": true
+    }
+  ],
+  "runs": [
+    {
+      "case_id": "dependency_edge_case",
+      "condition": "structured_summary_v2",
+      "metrics": {
+        "raw_bytes": 714,
+        "gzip_bytes": 385
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": false
+        },
+        "required_capabilities": [
+          "exact_dependency",
+          "stale_history_resolution"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "dependency_edge_case",
+      "condition": "minimal_amc_v2",
+      "metrics": {
+        "raw_bytes": 1418,
+        "gzip_bytes": 587
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "exact_dependency",
+          "stale_history_resolution"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "dependency_edge_case",
+      "condition": "full_history_control",
+      "metrics": {
+        "raw_bytes": 1460,
+        "gzip_bytes": 561
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "exact_dependency",
+          "stale_history_resolution"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "stale_revision_case",
+      "condition": "structured_summary_v2",
+      "metrics": {
+        "raw_bytes": 611,
+        "gzip_bytes": 338
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": false
+        },
+        "required_capabilities": [
+          "stale_history_resolution"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "stale_revision_case",
+      "condition": "minimal_amc_v2",
+      "metrics": {
+        "raw_bytes": 1072,
+        "gzip_bytes": 496
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "stale_history_resolution"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "stale_revision_case",
+      "condition": "full_history_control",
+      "metrics": {
+        "raw_bytes": 1115,
+        "gzip_bytes": 461
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "stale_history_resolution"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "negative_decision_case",
+      "condition": "structured_summary_v2",
+      "metrics": {
+        "raw_bytes": 751,
+        "gzip_bytes": 391
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": false
+        },
+        "required_capabilities": [
+          "negative_decision"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "negative_decision_case",
+      "condition": "minimal_amc_v2",
+      "metrics": {
+        "raw_bytes": 1227,
+        "gzip_bytes": 560
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "negative_decision"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "negative_decision_case",
+      "condition": "full_history_control",
+      "metrics": {
+        "raw_bytes": 1264,
+        "gzip_bytes": 518
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "negative_decision"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "audit_sequence_case",
+      "condition": "structured_summary_v2",
+      "metrics": {
+        "raw_bytes": 721,
+        "gzip_bytes": 388
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": false
+        },
+        "required_capabilities": [
+          "audit_reconstruction"
+        ],
+        "required_capabilities_pass": false,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": false
+      }
+    },
+    {
+      "case_id": "audit_sequence_case",
+      "condition": "minimal_amc_v2",
+      "metrics": {
+        "raw_bytes": 1509,
+        "gzip_bytes": 610
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "audit_reconstruction"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    },
+    {
+      "case_id": "audit_sequence_case",
+      "condition": "full_history_control",
+      "metrics": {
+        "raw_bytes": 1550,
+        "gzip_bytes": 581
+      },
+      "grade": {
+        "capabilities": {
+          "exact_dependency": true,
+          "stale_history_resolution": true,
+          "negative_decision": true,
+          "audit_reconstruction": true
+        },
+        "required_capabilities": [
+          "audit_reconstruction"
+        ],
+        "required_capabilities_pass": true,
+        "history_resolver_available": true,
+        "oracle_leaks": [],
+        "contract_pass": true
+      }
+    }
+  ]
+}

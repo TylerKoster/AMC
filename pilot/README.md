@@ -66,3 +66,13 @@ Run the local snapshot benchmark with:
 ```powershell
 python .\pilot\run_snapshot_replay_checks.py
 ```
+
+## Round C oracle/leakage preflight
+
+`round_c_preflight.py` is a no-API prerequisite for the next live comparison. It separates task input from the grading oracle, forbids precomputed answer fields, derives affected identifiers from typed before/after event effects, and kills targeted information-loss mutations.
+
+```powershell
+python .\pilot\round_c_preflight.py
+```
+
+Its fixtures are synthetic and establish only that the evaluation packets and graders obey their declared contract. They are not Round C model-performance evidence.

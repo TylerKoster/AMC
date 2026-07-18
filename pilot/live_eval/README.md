@@ -74,3 +74,11 @@ The regrader makes no API calls. It preserves raw decisions and corrects an
 identifier-impact oracle that was exact for evidence invalidation but ambiguous
 for other event types. Raw and regraded results are stored separately under
 `pilot/live_eval/results/`.
+
+Before any paid Round C run, execute the repository-level deterministic preflight:
+
+```powershell
+python .\pilot\round_c_preflight.py
+```
+
+That preflight removes precomputed answer fields from the next-round packet contract and freezes event-specific affected-ID semantics. A paid Round C runner should not be treated as ready until it uses the preflight's input/oracle partition and counts resolver retrieval costs.
